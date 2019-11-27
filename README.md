@@ -1,6 +1,7 @@
-# Sitios Turusticos
+# Sitios Turísticos
 
 Creado: @antony999k
+
 [![version](https://img.shields.io/badge/version-0.1.0-ff69b4.svg)]()
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/wasabeef/awesome-android-ui)
 
@@ -14,8 +15,7 @@ Sistema de Información que permite organizar, catalogar y ubicar sitios turí
 - Apache: `v2.4.33`
 
 ## Iniciar aplicación (Desarrollo)
-
-## Pasos para correcto funcionamiento
+- [Configurar entorno de desarrollo local *OSX*](https://websitebeaver.com/set-up-localhost-on-macos-high-sierra-apache-mysql-and-php-7-with-sslhttps)
 
 ## Guía de estilos
 ### Mensajes en los Commits de Git

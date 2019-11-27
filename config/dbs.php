@@ -3,5 +3,6 @@
    define('DB_USERNAME', 'root');
    define('DB_PASSWORD', 'bcdef12345');
    define('DB_DATABASE', 'ib15nrh');
+   define('DB_CHARSET', 'utf8');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 ?>

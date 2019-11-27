@@ -4,13 +4,13 @@
 <html">
    
    <head>
-      <title>Welcome </title>
+      <title>Inicio</title>
    </head>
    
    <body>
-      <h1>Welcome <?php echo $login_session; ?></h1> 
+      <h1>Bienvenido <?php echo $login_session; ?></h1> 
       <img src="<?= $login_session; ?>" alt="<?= $login_session; ?>">
-      <h2><a href = "logout.php">Sign Out</a></h2>
+      <h2><a href = "logout.php">Cerrar Sesión</a></h2>
    </body>
    
 </html>

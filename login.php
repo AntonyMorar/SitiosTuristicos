@@ -1,10 +1,9 @@
 <?php
-   include("config.php");
+   include("config/dbs.php");
    session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
-      
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
@@ -22,14 +21,14 @@
          
          header("location: index.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+         $error = "Nombre de usuario o contraseña inválida";
       }
    }
 ?>
 <html>
    
    <head>
-      <title>Login Page</title>
+      <title>Iniciar Sesión</title>
       
       <style type = "text/css">
          body {
@@ -52,13 +51,13 @@
 	
       <div align = "center">
          <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Inicia sesión</b></div>
 				
             <div style = "margin:30px">
                
                <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
+                  <label>Usuario  :</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Contraseña  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
                

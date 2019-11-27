@@ -9,6 +9,9 @@ Sistema de Información que permite organizar, catalogar y ubicar sitios turí
 # Contribuir
 
 ## Paquetes/Librerias recomendadas (Globales/Locales)
+- PHP: `v7.1.23`
+- MySQL: `v5.7.28`
+- Apache: `v2.4.33`
 
 ## Iniciar aplicación (Desarrollo)
 

@@ -1,16 +1,25 @@
 <?php
-   include('session.php');
+   include('config/session.php');
 ?>
-<html">
-   
-   <head>
-      <title>Inicio</title>
-   </head>
-   
-   <body>
-      <h1>Bienvenido <?php echo $login_session; ?></h1> 
-      <img src="<?= $login_session; ?>" alt="<?= $login_session; ?>">
-      <h2><a href = "logout.php">Cerrar Sesión</a></h2>
-   </body>
-   
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <?php include("templates/headTags.php");?>
+</head>
+
+<body>
+    <div id="root">
+        <?php include("templates/header.php");?>
+
+        <h1>Bienvenido <?php echo $login_session; ?></h1> 
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+    <!--===============================================================================================-->
+    <script src="src/js/moment.min.js"></script>
+</body>
+
 </html>

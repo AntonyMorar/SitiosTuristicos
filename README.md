@@ -22,17 +22,17 @@ Todos los archivos tienen un estilo de escritura camelCase.
 
 Todas las vistas *Páginas principales* son archivos .php en el directorio raíz
 
-- :file_folder: config *Archivos php de configuración global, como conexión a la base de datos, sesiones, etc*
-- :file_folder: controllers *Lógica de las vistas, que son llamadas por ajax. El nombre de los archivos es igual al nombre de la vista + Controller, ej. loginController.js*
-- :file_folder: db *Diagramas y archvios .sql para configurar base de datos fuera de la aplicación*
-- :file_folder: src *continen las imágenes, css y javascript loales de la aplicación*
-    - :file_folder: css
-    - :file_folder: images
-    - :file_folder: js
-- :file_folder: templates *Contiene todas las plantillas,es solo html, archvos .php*
-- :page_facing_up: index.php
-- :page_facing_up: login.php
-- :page_facing_up: register.php
+- :file_folder: **config**: *Archivos php de configuración global, como conexión a la base de datos, sesiones, etc*
+- :file_folder: **controllers**: *Lógica de las vistas, que son llamadas por ajax. El nombre de los archivos es igual al nombre de la vista + Controller, ej. loginController.js*
+- :file_folder: **db**: *Diagramas y archvios .sql para configurar base de datos fuera de la aplicación*
+- :file_folder: **src**: *continen las imágenes, css y javascript loales de la aplicación*
+    - :file_folder: **css**
+    - :file_folder: **images**
+    - :file_folder: **js**
+- :file_folder: **templates**: *Contiene todas las plantillas,es solo html, archvos .php*
+- :page_facing_up: **index.php**
+- :page_facing_up: **login.php**
+- :page_facing_up: **register.php**
 
 
 ## Guía de estilos

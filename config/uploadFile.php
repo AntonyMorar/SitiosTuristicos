@@ -3,7 +3,7 @@
     $filename = $_FILES['file']['name'];
 
     /* Location */
-    $location = "../uploads/".$filename;
+    $location = "../uploads/temp".$filename;
     $uploadOk = 1;
     $imageFileType = pathinfo($location,PATHINFO_EXTENSION);
 

@@ -11,7 +11,7 @@
         $email=mysqli_real_escape_string($db,$_POST['email']);
         $password=mysqli_real_escape_string($db,$_POST['password']); 
 
-        $sql = "INSERT INTO pf_usuarios(nombre, username, edad, género, foto, correo, contraseña) VALUES('$name', '$username', $age , '$gender','$targetPath','$email', '$password')";
+        $sql = "INSERT INTO pf_usuarios(nombre, username, edad, género, foto, correo, contraseña) VALUES('$name', '$username', $age , '$gender','fotou1.png','$email', '$password')";
         $result = mysqli_query($db,$sql);
         echo $result;
     }

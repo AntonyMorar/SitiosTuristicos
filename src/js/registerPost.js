@@ -6,8 +6,7 @@ $(document).ready(function () {
         var name = $("#name").val();
         var age = $("#age").val();
         var gender = $('input[name=gender]:checked', '#regForm').val();
-        var profilePic = $("#profilePic")[0].files[0];
-        var dataString = 'username=' + username + '&email=' + email + '&password=' + password + '&name=' + name + '&age=' + age + '&gender=' + gender + '&file=' + profilePic;
+        var dataString = 'username=' + username + '&email=' + email + '&password=' + password + '&name=' + name + '&age=' + age + '&gender=' + gender;
 
         if ($.trim(username).length > 0 && $.trim(email).length > 0 && $.trim(password).length > 0 && $.trim(name).length > 0 && $.trim(age).length > 0 && $.trim(gender).length > 0) {
             $.ajax({
@@ -45,6 +44,7 @@ $(document).ready(function () {
             processData: false,
             success: function(response){
                 if(response != 0){
+                    profilePic = response;
                     $("#img").attr("src",response); 
                     $(".preview img").show(); // Display image element
                 }else{

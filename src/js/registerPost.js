@@ -6,8 +6,9 @@ $(document).ready(function () {
         var name = $("#name").val();
         var age = $("#age").val();
         var gender = $('input[name=gender]:checked', '#regForm').val();
-        var profilePic = $("#profilePic").val();
-        var dataString = 'username=' + username + '&email=' + email + '&password=' + password + '&name=' + name + '&age=' + age + '&gender=' + gender + '&profilePic=' + profilePic;
+        var profilePic = $("#profilePic")[0].files[0];
+        var dataString = 'username=' + username + '&email=' + email + '&password=' + password + '&name=' + name + '&age=' + age + '&gender=' + gender + '&file=' + profilePic;
+
         if ($.trim(username).length > 0 && $.trim(email).length > 0 && $.trim(password).length > 0 && $.trim(name).length > 0 && $.trim(age).length > 0 && $.trim(gender).length > 0) {
             $.ajax({
                 type: "POST",
@@ -30,4 +31,26 @@ $(document).ready(function () {
         return false;
     });
 
+    $("#but_upload").click(function(){
+
+        var fd = new FormData();
+        var files = $('#file')[0].files[0];
+        fd.append('file',files);
+
+        $.ajax({
+            url: 'config/uploadFile.php',
+            type: 'post',
+            data: fd,
+            contentType: false,
+            processData: false,
+            success: function(response){
+                if(response != 0){
+                    $("#img").attr("src",response); 
+                    $(".preview img").show(); // Display image element
+                }else{
+                    alert('file not uploaded');
+                }
+            },
+        });
+    });
 });

@@ -46,7 +46,11 @@ if(!empty($_SESSION['login_user']))
                     <input type="radio" name="gender"class = "box"  value="F"> Mujer<br/>
                     <input type="radio" name="gender"class = "box"  value="B"> No binario<br/>
                     <input type="radio" name="gender"class = "box"  value="O"> Prefiero no revelar<br/><br/>
-                    <label>Foto de perfil</label><input type = "file" name = "profilePic" id="profilePic" class="box" /><br /><br />
+                    <div class='preview'>
+                        <img src="" id="img" width="100" height="100">
+                    </div>
+                    <label>Foto de perfil</label><input type="file" id="file" name="file" class="box"/><br />
+                    <input type="button" class="button" value="Upload" id="but_upload"><br /><br />
                     <input type = "submit" value = "Registrarse" id="register"/><br />
                </form>
                

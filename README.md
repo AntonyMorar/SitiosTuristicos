@@ -20,7 +20,7 @@ Sistema de Información que permite organizar, catalogar y ubicar sitios turí
 ## Estructura de archivos
 Todos los archivos tienen un estilo de escritura camelCase. 
 
-Todas las vistas *Páginas principales* son archivos .php en el directorio raíz
+Todas las vistas (*Páginas principales*) son archivos .php en el directorio raíz
 
 - :file_folder: **config**: *Archivos php de configuración global, como conexión a la base de datos, sesiones, etc*
 - :file_folder: **controllers**: *Lógica de las vistas, que son llamadas por ajax. El nombre de los archivos es: [nombre de la vista] + Controller, ej. loginController.php*
@@ -39,9 +39,9 @@ Todas las vistas *Páginas principales* son archivos .php en el directorio raíz
 - :page_facing_up: **admin.php**
 
 ## Descripción de las vistas
-Las vistas que requieren autenticación incluyen el archivo *session.php* para validad sesión
+Las vistas que requieren autenticación incluyen el archivo *session.php* para validar sesión (se encuentra en directorio config)
 
-### index.php
+### index.php :star:
 *Esta ruta requiere autenticación para acceder*
 
 Index es la vista principal, muestra cantidad especifica de sitios turisticos, dentro de esta vista está la opción de busqueda e integra completamente el **módulo de busqueda.**
@@ -54,7 +54,7 @@ Tiene conexión con los siguientes archivos:
 - styles.css: *Carga los estilos personalizados*
 - *Otros archivos template*
 
-### login.php
+### login.php :star:
 *Esta ruta requiere **no estar autenticado** para acceder*
 
 Login permite generar una sesión en el sitio.
@@ -65,7 +65,7 @@ Tiene conexión con los siguientes archivos:
 - styles.css: *Carga los estilos personalizados*
 - *Otros archivos template*
 
-### register.php
+### register.php :star:
 *Esta ruta requiere **no estar autenticado** para acceder*
 
 Login permite hacer un post a la base de datos y generar usuarios.
@@ -76,7 +76,7 @@ Tiene conexión con los siguientes archivos:
 - styles.css: *Carga los estilos personalizados*
 - *Otros archivos template*
 
-### profile.php
+### profile.php :star:
 *Esta ruta requiere autenticación para acceder*
 
 Profile permite ver tu perfil y el de otros usuarios.
@@ -87,13 +87,13 @@ Tiene conexión con los siguientes archivos:
 - styles.css: *Carga los estilos personalizados*
 - *Otros archivos template*
 
-### sites.php**
+### sites.php :star:
 *Esta ruta requiere autenticación para acceder*
 
 Sites mostrata la lista de los sitios guardados de usuario logeado.
 
 
-### contacts.php
+### contacts.php :star:
 *Esta ruta requiere autenticación para acceder*
 
 Contacts permite ver agregar a usuarios registrados en la plataforma para compartir tus listas de sitios.
@@ -104,7 +104,7 @@ Tiene conexión con los siguientes archivos:
 - styles.css: *Carga los estilos personalizados*
 - *Otros archivos template*
 
-### admin.php
+### admin.php :star:
 *Esta ruta requiere autenticación de **Administrador** para acceder*
 
 Tiene conexión con los siguientes archivos:

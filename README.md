@@ -23,17 +23,95 @@ Todos los archivos tienen un estilo de escritura camelCase.
 Todas las vistas *Páginas principales* son archivos .php en el directorio raíz
 
 - :file_folder: **config**: *Archivos php de configuración global, como conexión a la base de datos, sesiones, etc*
-- :file_folder: **controllers**: *Lógica de las vistas, que son llamadas por ajax. El nombre de los archivos es igual al nombre de la vista + Controller, ej. loginController.js*
+- :file_folder: **controllers**: *Lógica de las vistas, que son llamadas por ajax. El nombre de los archivos es: [nombre de la vista] + Controller, ej. loginController.php*
 - :file_folder: **db**: *Diagramas y archvios .sql para configurar base de datos fuera de la aplicación*
 - :file_folder: **src**: *continen las imágenes, css y javascript loales de la aplicación*
     - :file_folder: **css**
     - :file_folder: **images**
-    - :file_folder: **js**
+    - :file_folder: **js**: Librerias de terceros y archivos ajax que mandan a llamar a los controladores, el nombre de los ajax es: [nombre de la vista] + [funcion], ej. loginPost.js
 - :file_folder: **templates**: *Contiene todas las plantillas,es solo html, archvos .php*
 - :page_facing_up: **index.php**
 - :page_facing_up: **login.php**
 - :page_facing_up: **register.php**
+- :page_facing_up: **profile.php**
+- :page_facing_up: **sites.php**
+- :page_facing_up: **contacts.php**
+- :page_facing_up: **admin.php**
 
+## Descripción de las vistas
+Las vistas que requieren autenticación incluyen el archivo *session.php* para validad sesión
+
+### index.php
+*Esta ruta requiere autenticación para acceder*
+
+Index es la vista principal, muestra cantidad especifica de sitios turisticos, dentro de esta vista está la opción de busqueda e integra completamente el **módulo de busqueda.**
+
+Tiene conexión con los siguientes archivos:
+- searchController.php: *Maneja y realiza las busquedas de los sitios*
+- indexController.php: *Maneja y realiza la petición de los primeros sitios al cargar*
+- indexSearch.js: *Maneja la asincronia de las búsquedas*
+- indexGet.js: *Maneja la asincronia de la primera petición de los sitios*
+- styles.css: *Carga los estilos personalizados*
+- *Otros archivos template*
+
+### login.php
+*Esta ruta requiere **no estar autenticado** para acceder*
+
+Login permite generar una sesión en el sitio.
+
+Tiene conexión con los siguientes archivos:
+- loginController.php: *La validación y petición de inicio de sesión*
+- loginPost.js: *Maneja la asincronia de la petición, como el simbólo de carga, manejo de errores, etc*
+- styles.css: *Carga los estilos personalizados*
+- *Otros archivos template*
+
+### register.php
+*Esta ruta requiere **no estar autenticado** para acceder*
+
+Login permite hacer un post a la base de datos y generar usuarios.
+
+Tiene conexión con los siguientes archivos:
+- registerController.php: *La validación y petición de registro*
+- registerPost.js: *Maneja la asincronia de la petición, como el simbólos de carga, manejo de errores, etc*
+- styles.css: *Carga los estilos personalizados*
+- *Otros archivos template*
+
+### profile.php
+*Esta ruta requiere autenticación para acceder*
+
+Profile permite ver tu perfil y el de otros usuarios.
+
+Tiene conexión con los siguientes archivos:
+- profileController.php: *Hace la petición de los usuarios*
+- profileGet.js: *Maneja la asincronia de la petición, como el simbólos de carga, manejo de errores, etc*
+- styles.css: *Carga los estilos personalizados*
+- *Otros archivos template*
+
+### sites.php**
+*Esta ruta requiere autenticación para acceder*
+
+Sites mostrata la lista de los sitios guardados de usuario logeado.
+
+
+### contacts.php
+*Esta ruta requiere autenticación para acceder*
+
+Contacts permite ver agregar a usuarios registrados en la plataforma para compartir tus listas de sitios.
+
+Tiene conexión con los siguientes archivos:
+- contactsController.php: *Hace la petición para agregar usuarios a la lista de contáctos*
+- contactsPost.js: *Maneja la asincronia de la petición, como el simbólos de carga, manejo de errores, etc*
+- styles.css: *Carga los estilos personalizados*
+- *Otros archivos template*
+
+### admin.php
+*Esta ruta requiere autenticación de **Administrador** para acceder*
+
+Tiene conexión con los siguientes archivos:
+- *Diversos archivos **php** para manejar el CRUD de el módulo de administración
+- *Otros archivos template*
+
+Admin es un CRUD de casi todas las tablas dentro de la aplicación.
 
 ## Guía de estilos
 ### Mensajes en los Commits de Git

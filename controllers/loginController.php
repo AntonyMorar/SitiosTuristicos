@@ -4,10 +4,10 @@
 
     if(isset($_POST['username']) && isset($_POST['password'])){
         // username and password sent from form 
-        $myusername=mysqli_real_escape_string($db,$_POST['username']); 
-        $mypassword=mysqli_real_escape_string($db,$_POST['password']); 
+        $username=mysqli_real_escape_string($db,$_POST['username']); 
+        $password=mysqli_real_escape_string($db,$_POST['password']); 
 
-        $sql = "SELECT idUsuario FROM pf_usuarios WHERE username = '$myusername' and contraseña = '$mypassword'";
+        $sql = "SELECT idUsuario FROM pf_usuarios WHERE username = '$username' and contraseña = '$password'";
         $result = mysqli_query($db,$sql);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
         $count=mysqli_num_rows($result);

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!empty($_SESSION['login_user']))
+{
+   header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,22 +35,22 @@
 				
             <div style = "margin:30px">
                
-               <form action ="" method = "post">
-                    <label>Usename  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                    <label>Correo  :</label><input type = "email" name = "email" class = "box"/><br /><br />
-                    <label>Contraseña  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                    <label>Nombre Completo  :</label><input type = "text" name = "name" class = "box"/><br /><br />
-                    <label>Edad  :</label><input type = "number" name = "age" class = "box" /><br/><br />
+               <form action ="" method = "post" id="regForm" enctype="multipart/form-data">
+                    <label>Username  :</label><input type = "text" name = "username" id="username" class = "box" /><br /><br />
+                    <label>Correo  :</label><input type = "email" name = "email" id="email" class = "box"/><br /><br />
+                    <label>Contraseña  :</label><input type = "password" name = "password" id="password" class = "box" /><br/><br />
+                    <label>Nombre Completo  :</label><input type = "text" name = "name" id="name" class = "box"/><br /><br />
+                    <label>Edad  :</label><input type = "number" name = "age" id="age" class = "box" /><br/><br />
                     <label>Género  :</label><br/>
-                    <input type = "radio" name = "gender" class = "box" value="male"/> Hombre<br/>
-                    <input type="radio" name="gender"class = "box"  value="female"> Mujer<br/>
-                    <input type="radio" name="gender"class = "box"  value="noBinary"> No binario<br/>
-                    <input type="radio" name="gender"class = "box"  value="noDisclose"> Prefiero no revelar<br/><br/>
-                    <label>Foto de perfil</label><input type = "file" name = "profilePic" class = "box"/><br /><br />
-                    <input type = "submit" value = "Registrarse"/><br />
+                    <input type = "radio" name = "gender" class = "box" value="M"/> Hombre<br/>
+                    <input type="radio" name="gender"class = "box"  value="F"> Mujer<br/>
+                    <input type="radio" name="gender"class = "box"  value="B"> No binario<br/>
+                    <input type="radio" name="gender"class = "box"  value="O"> Prefiero no revelar<br/><br/>
+                    <label>Foto de perfil</label><input type = "file" name = "profilePic" id="profilePic" class="box" /><br /><br />
+                    <input type = "submit" value = "Registrarse" id="register"/><br />
                </form>
                
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+               <div style = "font-size:11px; color:#cc0000; margin-top:10px" id="error"></div>
 					
             </div>
             
@@ -53,11 +61,10 @@
       </div>
     </div>
 
-    <!--===============================================================================================-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
-    <!--===============================================================================================-->
-    <script src="src/js/moment.min.js"></script>
+   <!--===============================================================================================-->
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <!--===============================================================================================-->
+   <script src="src/js/registerPost.js"></script>
 </body>
 
 </html>

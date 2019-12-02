@@ -15,4 +15,5 @@
         $result = mysqli_query($db,$sql);
         echo $result;
     }
+    
 ?>

@@ -11,13 +11,11 @@
 <body>
     <div id="root">
         <?php include("templates/header.php");?>
-
-        <h1>Sites</h1>
+        <h1>Contacts</h1>
     </div>
 
     <!--===============================================================================================-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
     <!--===============================================================================================-->
     <script src="src/js/moment.min.js"></script>
 </body>

@@ -16,7 +16,7 @@
 
         <div id="search">
             <form enctype="multipart/form-data" id="searchForm">
-                <input type="text" name="search" placeholder="Buscar...">
+                <input type="text" name="search" placeholder="Buscar..." required>
                 <p>Filtrar por:</p>
                 <label for="ubication">Ubicación:</label>
                 <input type="text" name="ubication" placeholder="Todas">
@@ -25,7 +25,7 @@
                     <option value="" selected>Todas</option> 
                     <option value="Ciudad">Ciudad</option>
                     <option value="Parque">Parque</option>
-                    <option value="ParPlayaque">Playa</option>
+                    <option value="Playa">Playa</option>
                     <option value="Desierto">Desierto</option>
                     <option value="Selva">Selva</option>
                     <option value="Bosque">Bosque</option>
@@ -48,13 +48,11 @@
             </form>
         </div>
 
-        <div id="recomendations">
+        <div id="div1">
             <h2>Recomendaciones</h2>
-
         </div>
 
         <div id="results">
-
         </div>
     </div>
 

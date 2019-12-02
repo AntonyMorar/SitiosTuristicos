@@ -18,7 +18,6 @@ function obtenerContactos(){
 
 function obtenerContactosSuccess(result,status,xhr)
 {
-    console.log("se añadio el pinche contacto");
 	$("#results").html(result);//Pega y muestra el código de html que se obtuvo de Ajax. Lo pega en el objeto con id="cuadro"
 }
 

@@ -3,7 +3,7 @@
 ?>
 
 <header>
-    <h1>Sitios Turisticos</h1>
+    <h1>Sitios Turísticos</h1>
 
     <nav>
         <a href="index.php">Sitios</a>

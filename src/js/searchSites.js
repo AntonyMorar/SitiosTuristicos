@@ -1,5 +1,4 @@
 $(document).ready(function (e) {
-
     $("#searchForm").on('submit', function (e) {
         e.preventDefault();
 
@@ -17,7 +16,6 @@ $(document).ready(function (e) {
 
         return true;
     });
-
 
     function BuscarSitiosSuccess(result, status, xhr) {
         $("#results").html(result); //Pega y muestra el código de html que se obtuvo de Ajax. Lo pega en el objeto con id="cuadro"

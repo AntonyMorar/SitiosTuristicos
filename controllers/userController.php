@@ -18,7 +18,6 @@
         }
       }
 
-
       function findTimeAgo($past, $now = "now") {
         $secondsPerMinute = 60;
         $secondsPerHour = 3600;

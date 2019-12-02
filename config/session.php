@@ -1,7 +1,6 @@
 <?php
    include("config/dbs.php");
    session_start();
-   
    $userID = $_SESSION['login_user'];
    $ses_sql = mysqli_query($db,"select username from pf_usuarios where idUsuario = '$userID' ");
    

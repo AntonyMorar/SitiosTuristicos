@@ -2,18 +2,20 @@
       include("config/dbs.php");
       session_start();
 
-      $id=$_SESSION['login_user'];
-      $sql = "SELECT idUsuario, tipo_usuario, nombre, username, edad, género, foto, correo, fecha_registro FROM pf_usuarios WHERE idUsuario='$id'";
-      $result = mysqli_query($db,$sql);
-      while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-      { 
-        $name=$row['nombre'];
-        $username=$row['username'];
-        $age=$row['edad'];
-        $gender=$row['género'];
-        $email=$row['correo'];
-        $register_date=$row['fecha_registro'];
-        $rel_register_date=findTimeAgo($register_date);
+      if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $sql = "SELECT idUsuario, tipo_usuario, nombre, username, edad, género, foto, correo, fecha_registro FROM pf_usuarios WHERE idUsuario='$id'";
+        $result = mysqli_query($db,$sql);
+        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+        { 
+          $name=$row['nombre'];
+          $username=$row['username'];
+          $age=$row['edad'];
+          $gender=$row['género'];
+          $email=$row['correo'];
+          $register_date=$row['fecha_registro'];
+          $rel_register_date=findTimeAgo($register_date);
+        }
       }
 
 

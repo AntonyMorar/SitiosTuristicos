@@ -12,6 +12,7 @@
     <div id="root">
         <?php include("templates/header.php");?>
         <div id="results"></div>
+        <div id="resultsOp"></div>
     </div>
 
     <!--===============================================================================================-->

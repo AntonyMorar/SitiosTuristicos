@@ -1,0 +1,40 @@
+<?php
+    //Cargamos archivos a ocupar
+    include("../config/dbs.php");
+    require_once "HTML/Template/IT.php";
+    $template = new HTML_Template_IT('../templates');
+    $template->loadTemplatefile("opinionsList.html", true, true);
+    
+    if(isset($_GET['id'])){
+        // Cargamos el parametro id y lo guardamos en una variable
+        $siteID = $_GET["id"];
+        //Armamos query
+        $query = "SELECT op.idOpinion, op.opinión, op.calificación, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
+        INNER JOIN pf_usuarios AS us ON us.idUsuario = op.idUsuario
+        WHERE op.idSitio = $siteID";
+        //Ejecutamos query
+        $result = mysqli_query($db, $query) or die("La consulta de opiniones fallo");
+        //Deslpegamos query
+        while($line = mysqli_fetch_assoc($result))
+        {
+            // Fijamos el bloque con la informacion de cada usuario
+            $template->setCurrentBlock("FILA");
+                
+            // Desplegamos la informacion de cada presidentes
+            $template->setVariable("ID", utf8_encode($line['idOpinion']));
+            $template->setVariable("OPINION", utf8_encode($line['opinión']));
+            $template->setVariable("CALIF", utf8_encode($line['calificación']));
+            $template->setVariable("FECHA", utf8_encode($line['fecha']));
+            $template->setVariable("IDUSUARIO", $line['idUsuario']);
+            $template->setVariable("NOMBREUSUARIO", utf8_encode($line['nombre_usuario']));
+            $template->setVariable("USERNAME", utf8_encode($line['username']));
+            $template->setVariable("FOTO_USUARIO", utf8_encode($line['foto_usuario']));
+            
+            $template->parseCurrentBlock("FILA");
+        }
+        //Liberamos espacio
+        mysqli_free_result($result);
+        //Imprimimos el codigo html resultante
+        $template->show();
+    }
+?>

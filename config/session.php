@@ -2,9 +2,8 @@
    include("config/dbs.php");
    session_start();
    
-   $user_check = $_SESSION['login_user'];
-   
-   $ses_sql = mysqli_query($db,"select username from pf_usuarios where idUsuario = '$user_check' ");
+   $userID = $_SESSION['login_user'];
+   $ses_sql = mysqli_query($db,"select username from pf_usuarios where idUsuario = '$userID' ");
    
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
    

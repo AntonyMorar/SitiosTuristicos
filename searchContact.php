@@ -11,8 +11,8 @@
 <body>
     <div id="root">
         <?php include("templates/header.php");?>
-        <h1>Lista de contactos</h1>
-        <a href="searchContact.php">Buscar contactos</a>
+        <h1>Buscar Contactos</h1>
+        <input type="text" name="contacto" placeholder="Nombre del contacto" onkeyup="Actualizar(this.value)">
 
         <div id="results"></div>
     </div>
@@ -20,7 +20,8 @@
     <!--===============================================================================================-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!--===============================================================================================-->
-    <script src="src/js/contactsGet.js"></script>
+    <script src="src/js/searchContact.js"></script>
+    <script src="src/js/contactsAdd.js"></script>
 
 </body>
 

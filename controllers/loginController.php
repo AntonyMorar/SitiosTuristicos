@@ -8,7 +8,7 @@
         $password=mysqli_real_escape_string($db,$_POST['password']); 
 
         $sql = "SELECT idUsuario FROM pf_usuarios WHERE username = '$username' and contraseña = '$password'";
-        $result = mysqli_query($db,$sql);
+        $result = mysqli_query($db,$sql) or die("La consulta de login fallo");
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
         $count=mysqli_num_rows($result);
         

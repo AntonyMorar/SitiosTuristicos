@@ -12,6 +12,15 @@ CREATE TABLE IF NOT EXISTS `pf_usuarios` (
   PRIMARY KEY (`idUsuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
+/* Crea tabla de relación muchos a muchos. Cuando se elimina un usuario se eliminan los hijos que dependen de ella.*/
+CREATE TABLE IF NOT EXISTS `pf_listacontactos` (
+  `id` int(10) unsigned PRIMARY KEY AUTO_INCREMENT,
+  `idUsuario` int(10) unsigned,
+  `idContacto` int(10) unsigned,
+  FOREIGN KEY (idUsuario) REFERENCES pf_usuarios (idUsuario) ON DELETE CASCADE,
+  FOREIGN KEY (idContacto) REFERENCES pf_usuarios (idUsuario) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 CREATE TABLE IF NOT EXISTS `pf_sitios` (
   `idSitio` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) DEFAULT NULL,
@@ -35,11 +44,6 @@ CREATE TABLE IF NOT EXISTS `pf_opiniones` (
   `calificación` float(4,3) DEFAULT NULL,
   PRIMARY KEY (`idOpinion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
-
-CREATE TABLE IF NOT EXISTS `pf_listacontactos` (
-  `idUsuario` int(11) unsigned DEFAULT NULL,
-  `idContacto` int(11) unsigned DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `pf_fotositios` (
   `idFoto` int(10) unsigned NOT NULL AUTO_INCREMENT,

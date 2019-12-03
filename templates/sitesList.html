@@ -1,10 +1,24 @@
-<h2>Resultados</h2>
-<table>
+<h2 class="title">Resultados</h2>
+
+<div class="siteList">
     <!-- BEGIN FILA -->
-    <tr>
-        <td>
-            <a href="site.php?id={ID}">{NOMBRE} {UBICACION} {RANKING}</a>
-        </td>
-    </tr>
+    <div class="siteCard">
+        <a href="site.php?id={ID}">
+            <div class="imageContainer">
+                <img src="" alt="{NOMBRE}">
+            </div>
+            <div class="info">
+                <h4>{NOMBRE}</h4>
+                <div class="infoUbi">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <p>{UBICACION}</p>
+                </div>
+                <div class="infoStar">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <p>{RANKING}</p>
+                </div>
+            </div>
+        </a>
+    </div>
     <!-- END FILA -->
-</table>
+</div>

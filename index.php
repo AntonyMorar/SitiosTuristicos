@@ -19,8 +19,7 @@
                     <input type="text" name="search" placeholder="Buscar..." required class="searchInput">
                     <button type=submit class="buttonGen">Buscar</button>
                 </div>
-                <p>Filtrar por:</p>
-                <input type="text" name="ubication" placeholder="Ubicación">
+                <input type="text" name="ubication" placeholder="Ubicación" class="ubi">
                 <label for="category">Categoría:</label>
                 <select name="category">
                     <option value="" selected>Todas</option> 
@@ -49,7 +48,7 @@
         </div>
 
         <div id="div1">
-            <h2>Recomendaciones</h2>
+            
         </div>
 
         <div id="results">

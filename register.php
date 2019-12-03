@@ -10,60 +10,61 @@ if(!empty($_SESSION['login_user']))
 <html lang="es">
 
 <head>
-    <?php include("templates/headTags.php");?>
-    <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
+   <?php include("templates/headTags.php");?>
 </head>
 
 <body>
-    <div id="root">
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Crea tu cuenta</b></div>
-				
-            <div style = "margin:30px">
-               
-               <form action ="" method = "post" id="regForm" enctype="multipart/form-data">
-                    <label>Username  :</label><input type = "text" name = "username" id="username" class = "box" /><br /><br />
-                    <label>Correo  :</label><input type = "email" name = "email" id="email" class = "box"/><br /><br />
-                    <label>Contraseña  :</label><input type = "password" name = "password" id="password" class = "box" /><br/><br />
-                    <label>Nombre Completo  :</label><input type = "text" name = "name" id="name" class = "box"/><br /><br />
-                    <label>Edad  :</label><input type = "number" name = "age" id="age" class = "box" /><br/><br />
-                    <label>Género  :</label><br/>
-                    <input type = "radio" name = "gender" class = "box" value="M"/> Hombre<br/>
-                    <input type="radio" name="gender"class = "box"  value="F"> Mujer<br/>
-                    <input type="radio" name="gender"class = "box"  value="B"> No binario<br/>
-                    <input type="radio" name="gender"class = "box"  value="O"> Prefiero no revelar<br/><br/>
-                    <div class='preview'>
-                        <img src="" id="img" width="100" height="100">
-                    </div>
-                    <label>Foto de perfil</label><input type="file" id="file" name="file" class="box"/><br />
-                    <input type="button" class="button" value="Upload" id="but_upload"><br /><br />
-                    <input type = "submit" value = "Registrarse" id="register"/><br />
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px" id="error"></div>
-					
-            </div>
-            
-            <p>O <a href="login.php">Inicia Sesión</a></p>
+   <div class="login">
+      <div class="loginCard">
+         <img src="./src/images/sitiosLogo.png" alt="Sitios Turisticos" class="logo">
+         <h1 class="title">Crea tu cuenta</h1>
 
-         </div>
-			
+         <form method="post" id="regForm" enctype="multipart/form-data">
+            <div class="inputPairDouble">
+               <div class="inputPair">
+                  <label for="username">Username</label><input type="text" name="username" id="username" class="box" />
+               </div>
+               <div class="inputPair">
+                  <label for="email">Correo</label><input type="email" name="email" id="email" class="box" />
+               </div>
+            </div>
+
+            <div class="inputPairDouble">
+               <div class="inputPair">
+                  <label for="password">Contraseña</label><input type="password" name="password" id="password"
+                     class="box" />
+               </div>
+               <div class="inputPair">
+                  <label for="name">Nombre Completo</label><input type="text" name="name" id="name" class="box" />
+               </div>
+            </div>
+
+            <div class="inputPairDouble">
+               <div class="inputPair short">
+                  <label for="age">Edad</label><input type="number" name="age" id="age" class="box" min="0" max="120" />
+               </div>
+               <div class="inputPair">
+                  <label>Género</label>
+                  <div class="inputGender">
+                     <input type="radio" name="gender" class="box" id="M" value="M" /><label for="M">Hombre</label>
+                     <input type="radio" name="gender" class="box" value="F" id="F"><label for="F">Mujer</label>
+                     <input type="radio" name="gender" class="box" value="B" id="B"><label for="B">No binario</label>
+                     <input type="radio" name="gender" class="box" value="O" id="O"><label for="O">No Revelar</label>
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="inputPair">
+               <label>Foto de perfil</label><input type="file" id="file" name="file" class="box" />
+            </div>
+            <input type="submit" value="Registrarse" id="register" class="buttonGen" />
+         </form>
+         <div class="errorGlobal" id="error"></div>
+         <div class="exitoGlobal" id="succes"></div>
+         <p>¿Ya tiene una cuenta? <a href="login.php">Inicia Sesión</a></p>
       </div>
-    </div>
+   </div>
 
    <!--===============================================================================================-->
    <!--===============================================================================================-->

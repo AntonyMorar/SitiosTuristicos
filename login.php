@@ -14,7 +14,6 @@ if(!empty($_SESSION['login_user']))
 </head>
 
 <body>
-
    <div class="login">
       <div class="loginCard">
          <img src="./src/images/sitiosLogo.png" alt="Sitios Turisticos" class="logo">
@@ -29,7 +28,7 @@ if(!empty($_SESSION['login_user']))
             </div>
             <input type="submit" value="Iniciar Sesíon" id="login" class="buttonGen"/>
          </form>
-         <div style="font-size:11px; color:#cc0000; margin-top:10px" id="error"></div>
+         <div class="errorGlobal" id="error"></div>
          <p>¿Nuevo en Sitios Turísticos? <a href="register.php">Regístrate</a></p>
       </div>
    </div>

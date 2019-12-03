@@ -1,20 +1,22 @@
 /* Global
 ---------------------------------------------------------------*/
-body{
+body {
     color: #333;
     font-family: 'Open Sans';
 }
-p{
+
+p {
     font-family: 'Lato';
 }
 
-input, textarea{
+input,
+textarea {
     border-radius: 50px;
     border: 1px solid #ccc;
     padding: 5px 12px;
 }
 
-select{
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -30,38 +32,50 @@ select{
     padding-right: 2rem;
 }
 
-.buttonGen{
+.buttonGen {
     padding: 10px 25px;
     border-radius: 50px;
     color: white;
     border: none;
-    background: rgba(40,117,249,1);
-    background: -moz-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40,117,249,1)), color-stop(100%, rgba(84,57,219,1)));
-    background: -webkit-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
-    background: -o-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
-    background: -ms-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
-    background: linear-gradient(to right, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2875f9', endColorstr='#5439db', GradientType=1 );
+    background: rgba(40, 117, 249, 1);
+    background: -moz-linear-gradient(left, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40, 117, 249, 1)), color-stop(100%, rgba(84, 57, 219, 1)));
+    background: -webkit-linear-gradient(left, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
+    background: -o-linear-gradient(left, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
+    background: linear-gradient(to right, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2875f9', endColorstr='#5439db', GradientType=1);
 }
 
-.buttonGen:hover{
-    background: rgba(86,146,251,1);
-    background: -moz-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86,146,251,1)), color-stop(100%, rgba(114,91,225,1)));
-    background: -webkit-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
-    background: -o-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
-    background: -ms-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
-    background: linear-gradient(to right, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5692fb', endColorstr='#725be1', GradientType=1 );
+.buttonGen:hover {
+    background: rgba(86, 146, 251, 1);
+    background: -moz-linear-gradient(left, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86, 146, 251, 1)), color-stop(100%, rgba(114, 91, 225, 1)));
+    background: -webkit-linear-gradient(left, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
+    background: -o-linear-gradient(left, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
+    background: linear-gradient(to right, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5692fb', endColorstr='#725be1', GradientType=1);
 }
 
-.buttonGen:active{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 2px 5px rgba(0,0,0,0.14);
+.buttonGen:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10), 0 2px 5px rgba(0, 0, 0, 0.14);
 }
 
-#results{
+#results {
     padding: 20px 60px;
+}
+
+.errorGlobal {
+    font-size: 11px;
+    color: #cc0000;
+    margin-top: 10px;
+}
+
+.exitoGlobal {
+    font-size: 11px;
+    color: #78d65c;
+    margin-top: 10px;
 }
 
 /* Header
@@ -83,7 +97,7 @@ header .logo img {
     width: 100%;
 }
 
-header .navContainer{
+header .navContainer {
     display: flex;
 }
 
@@ -110,11 +124,11 @@ header .navContainer a:focus {
     text-decoration: none;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     left: -110px !important;
 }
 
-.dropdown-menu a{
+.dropdown-menu a {
     color: #333 !important;
     width: 100%;
 }
@@ -144,19 +158,19 @@ a.effect-underline:hover:after {
 
 /* Header
 ---------------------------------------------------------------*/
-#search{
+#search {
     text-align: center;
     padding: 30px 50px;
 }
 
-.searchInputContainer{
+.searchInputContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.searchInputContainer label{
+.searchInputContainer label {
     margin-bottom: 0px;
     font-size: 1.5em;
     border-radius: 50%;
@@ -166,12 +180,12 @@ a.effect-underline:hover:after {
     margin-right: 10px;
 }
 
-.searchInputContainer .buttonGen{
+.searchInputContainer .buttonGen {
     padding: 20px 40px;
     font-size: 1em;
 }
 
-.searchInput{
+.searchInput {
     padding: 10px;
     font-size: 2.5em;
     border: none;
@@ -179,46 +193,46 @@ a.effect-underline:hover:after {
     margin-right: 5px;
 }
 
-.searchInput:focus{
+.searchInput:focus {
     outline: none;
 }
 
-.ubi{
+.ubi {
     margin-right: 20px;
 }
 
 /* Sites List
 ---------------------------------------------------------------*/
-.siteList{
+.siteList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.title{
+.title {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.siteCard{
+.siteCard {
     border-radius: 4px;
     width: 23%;
     margin-bottom: 40px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.13), 0 2px 5px rgba(0,0,0,0.20);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13), 0 2px 5px rgba(0, 0, 0, 0.20);
 }
 
-.siteCard .imageContainer{
+.siteCard .imageContainer {
     background-color: #ccc;
     width: 100%;
     min-height: 150px;
     height: 200px;
 }
 
-.siteCard .info{
+.siteCard .info {
     padding: 10px 15px;
 }
 
-.siteCard .imageContainer img{
+.siteCard .imageContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -229,34 +243,34 @@ a.effect-underline:hover:after {
 }
 
 .siteCard .infoUbi,
-.siteCard .infoStar{
+.siteCard .infoStar {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
 }
 
 .siteCard .infoUbi span,
-.siteCard .infoStar span{
+.siteCard .infoStar span {
     margin-right: 5px;
 }
 
-.siteCard .infoStar span{
+.siteCard .infoStar span {
     color: #ffd400;
 }
 
-.siteCard a{
+.siteCard a {
     color: #333;
 }
 
 .siteCard a:hover,
-.siteCard a:focus{
+.siteCard a:focus {
     color: #333;
     text-decoration: none;
 }
 
-/* Login
+/* Login & Registro
 ---------------------------------------------------------------*/
-.login{
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,30 +284,58 @@ a.effect-underline:hover:after {
     text-align: center;
 }
 
-.login .loginCard{
+.login .loginCard {
     padding: 40px;
     background-color: white;
     width: 50%;
     border-radius: 4px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.13), 0 2px 5px rgba(0,0,0,0.20);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13), 0 2px 5px rgba(0, 0, 0, 0.20);
 }
 
-.login .loginCard .title{
+.login .loginCard .title {
     font-size: 1.7em;
     margin-bottom: 30px;
 }
 
-.login .loginCard .logo{
-    width: 250px;
+.login .loginCard .logo {
+    width: 200px;
 }
 
-.login .loginCard .inputPair{
+.login .loginCard .inputPair {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-.login .loginCard .inputPair input{
+.login .loginCard .inputPair.short {
+    width: 25%;
+}
+
+.login .loginCard .inputPair input {
     width: 60%;
     margin-bottom: 15px;
+}
+
+.login .loginCard .inputPairDouble {
+    display: flex;
+    width: 100%;
+}
+
+.login .loginCard .inputPairDouble input {
+    width: 95%;
+    margin-bottom: 15px;
+}
+
+.login .loginCard .inputGender {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    border: 1px solid#ccc;
+    border-radius: 50px;
+    padding: 0 15px;
+}
+
+.login .loginCard .inputGender label {
+    font-size: 11px;
 }

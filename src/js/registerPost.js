@@ -19,7 +19,7 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     if (data) {
-                        $("#error").html("You are registered successfully. Go to login");
+                        $("#succes").html("You are registered successfully. Go to login");
                     } else {
                         $("#register").val('Registrarse')
                         $("#error").html("Error al crear un nuevo usuario, intenta de nuevo más tarde.");

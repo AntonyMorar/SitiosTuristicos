@@ -11,7 +11,7 @@
         //Armamos query
         $query = "SELECT u.*, AVG(o.calificacion) AS ranking FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio WHERE u.idSitio = $siteID GROUP BY u.idSitio";
         //Ejecutamos query
-        $result = mysqli_query($db, $query) or die("La consulta para obtener el sitio fallo");
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));
         //Deslpegamos query
         $line = mysqli_fetch_assoc($result);
 

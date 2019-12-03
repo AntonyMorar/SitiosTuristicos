@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS `pf_listacontactos` (
   `id` int(10) unsigned PRIMARY KEY AUTO_INCREMENT,
   `idUsuario` int(10) unsigned,
   `idContacto` int(10) unsigned,
-  FOREIGN KEY (idUsuario) REFERENCES pf_usuarios (idUsuario) ON DELETE CASCADE,
-  FOREIGN KEY (idContacto) REFERENCES pf_usuarios (idUsuario) ON DELETE CASCADE
+  FOREIGN KEY (`idUsuario`) REFERENCES pf_usuarios (`idUsuario`) ON DELETE CASCADE,
+  FOREIGN KEY (`idContacto`) REFERENCES pf_usuarios (`idUsuario`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `pf_sitios` (

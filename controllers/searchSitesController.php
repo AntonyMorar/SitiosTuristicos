@@ -28,7 +28,7 @@
         }
 
         //Ejecutamos query
-        $result = mysqli_query($db, $query) or die("La consulta de sitios falló");
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));
         //Deslpegamos query
         while($line = mysqli_fetch_assoc($result))
         {

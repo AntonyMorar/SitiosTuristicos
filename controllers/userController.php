@@ -5,7 +5,7 @@
       if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $sql = "SELECT idUsuario, tipo_usuario, nombre, username, edad, genero, foto, correo, fecha_registro FROM pf_usuarios WHERE idUsuario='$id'";
-        $result = mysqli_query($db,$sql);
+        $result = mysqli_query($db,$sql) or die(mysqli_error($db));
         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
         { 
           $name=$row['nombre'];

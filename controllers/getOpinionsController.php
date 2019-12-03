@@ -13,7 +13,7 @@
         INNER JOIN pf_usuarios AS us ON us.idUsuario = op.idUsuario
         WHERE op.idSitio = $siteID";
         //Ejecutamos query
-        $result = mysqli_query($db, $query) or die("La consulta de opiniones fallo");
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));
         //Deslpegamos query
         while($line = mysqli_fetch_assoc($result))
         {

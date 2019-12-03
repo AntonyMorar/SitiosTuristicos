@@ -28,7 +28,7 @@
 
             //insert form data in the database
             $sql = "INSERT INTO pf_usuarios(nombre, username, edad, genero, foto, correo, contrasenia) VALUES('$name', '$username', $age , '$gender','$path','$email', '$password')";
-            $result = mysqli_query($db,$sql) or die("La consulta de registro falló");
+            $result = mysqli_query($db,$sql) or die(mysqli_error($db));
             echo $result;
             //echo $insert?'ok':'err';
             }

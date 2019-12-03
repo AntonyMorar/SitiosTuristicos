@@ -11,7 +11,7 @@
     $con=utf8_decode($_POST['contacto']);
     $query = "SELECT idUsuario, nombre, username, foto FROM pf_usuarios WHERE (idUsuario <> $userID) AND (nombre LIKE '%$con%' OR username LIKE '%$con%')";
     //Ejecutamos query
-    $result = mysqli_query($db, $query) or die("La consulta 1 fallo");
+    $result = mysqli_query($db, $query) or die(mysqli_error($db));
     //Deslpegamos query
     while($line = mysqli_fetch_assoc($result))
     {

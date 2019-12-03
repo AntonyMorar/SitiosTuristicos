@@ -13,7 +13,7 @@
     JOIN pf_usuarios AS cont ON list.idContacto = cont.idUsuario
     WHERE u.idUsuario = $userID";
     //Ejecutamos query
-    $result = mysqli_query($db, $query) or die("La consulta para obtener contactos fallo");
+    $result = mysqli_query($db, $query) or die(mysqli_error($db));
     //Deslpegamos query
     while($line = mysqli_fetch_assoc($result))
     {

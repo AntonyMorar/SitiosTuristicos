@@ -1,7 +1,80 @@
+body{
+    color: #333;
+}
 /* Header
 ---------------------------------------------------------------*/
-header{
+header {
     background-color: #24292E;
     color: white;
-    padding: 15px;
+    padding: 17px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 175px;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+header .navContainer{
+    display: flex;
+}
+
+header .navContainer a {
+    color: white;
+    font-size: 1.25em;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header .navContainer a:last-child {
+    margin-right: 15px;
+}
+
+
+header .navContainer a:hover {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+header .navContainer a:focus {
+    color: #d3d3d3 !important;
+    text-decoration: none;
+}
+
+.dropdown-menu{
+    left: -110px !important;
+}
+
+.dropdown-menu a{
+    color: #333 !important;
+    width: 100%;
+}
+
+/*effect-underline*/
+a.effect-underline:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+a.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }

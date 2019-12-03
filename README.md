@@ -1,4 +1,4 @@
-![Sitios Turísticos](./src/images/sitiosLogo.png)
+![Sitios Turísticos](./src/images/sitiosLogo.png?style=centerme)
 
 Creado: @antony999k
 

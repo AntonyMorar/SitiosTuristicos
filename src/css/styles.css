@@ -1,6 +1,45 @@
+/* Global
+---------------------------------------------------------------*/
 body{
     color: #333;
+    font-family: 'Open Sans';
 }
+p{
+    font-family: 'Lato';
+}
+
+input, textarea, select{
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    padding: 5px 12px;
+}
+
+.buttonGen{
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+    background: rgba(40,117,249,1);
+    background: -moz-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40,117,249,1)), color-stop(100%, rgba(84,57,219,1)));
+    background: -webkit-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
+    background: -o-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
+    background: -ms-linear-gradient(left, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
+    background: linear-gradient(to right, rgba(40,117,249,1) 0%, rgba(84,57,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2875f9', endColorstr='#5439db', GradientType=1 );
+}
+
+.buttonGen:hover{
+    background: rgba(86,146,251,1);
+    background: -moz-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86,146,251,1)), color-stop(100%, rgba(114,91,225,1)));
+    background: -webkit-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
+    background: -o-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
+    background: -ms-linear-gradient(left, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
+    background: linear-gradient(to right, rgba(86,146,251,1) 0%, rgba(114,91,225,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5692fb', endColorstr='#725be1', GradientType=1 );
+}
+
 /* Header
 ---------------------------------------------------------------*/
 header {
@@ -77,4 +116,44 @@ a.effect-underline:hover:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+/* Header
+---------------------------------------------------------------*/
+#search{
+    text-align: center;
+    padding: 30px 50px;
+}
+
+.searchInputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInputContainer label{
+    margin-bottom: 0px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    padding: 10px 14px;
+    border: solid 1px #ccc;
+    color: #383838;
+    margin-right: 10px;
+}
+
+.searchInputContainer .buttonGen{
+    padding: 20px 40px;
+    font-size: 1em;
+}
+
+.searchInput{
+    padding: 10px;
+    font-size: 2.5em;
+    border: none;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.searchInput:focus{
+    outline: none;
 }

@@ -12,14 +12,15 @@
     <div id="root">
         <?php include("templates/header.php");?>
 
-        <h1>Sitios Turísticos</h1>
-
         <div id="search">
             <form id="searchForm">
-                <input type="text" name="search" placeholder="Buscar..." required>
+                <div class="searchInputContainer">
+                    <label for="search"><span class="glyphicon glyphicon-search"></span></label>
+                    <input type="text" name="search" placeholder="Buscar..." required class="searchInput">
+                    <button type=submit class="buttonGen">Buscar</button>
+                </div>
                 <p>Filtrar por:</p>
-                <label for="ubication">Ubicación:</label>
-                <input type="text" name="ubication" placeholder="Todas">
+                <input type="text" name="ubication" placeholder="Ubicación">
                 <label for="category">Categoría:</label>
                 <select name="category">
                     <option value="" selected>Todas</option> 
@@ -44,7 +45,6 @@
                     <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
                     <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
                 </select>
-                <button type=submit>Buscar</button>
             </form>
         </div>
 

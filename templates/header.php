@@ -10,7 +10,6 @@
       <nav>
           <a href="index.php" class="effect-underline">Sitios</a>
           <a href="contacts.php" class="effect-underline">Contactos</a>
-          <a href="profile.php?id=<?php echo $myId; ?>" class="effect-underline">Mi perfil</a>
       </nav>
       <div class="dropdown">
             <a class="effect-underline" type="button" data-toggle="dropdown">Perfil <span class="caret"></span></a>

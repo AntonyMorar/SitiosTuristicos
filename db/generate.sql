@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS `pf_usuarios` (
   `username` varchar(20) DEFAULT NULL UNIQUE,
   `edad` int(3) DEFAULT NULL,
   `genero` enum('F','M','B','O') DEFAULT NULL,
-  `foto` varchar(10) DEFAULT NULL,
-  `correo` varchar(35) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `correo` varchar(35) DEFAULT NULL UNIQUE,
   `contrasenia` varchar(15) DEFAULT NULL,
   `fecha_registro` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idUsuario`)
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `pf_opiniones` (
 CREATE TABLE IF NOT EXISTS `pf_fotositios` (
   `idFoto` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `idSitio` int(10) unsigned NOT NULL,
-  `foto` varchar(50) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idFoto`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 

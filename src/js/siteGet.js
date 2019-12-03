@@ -4,11 +4,11 @@ $(document).ready(function () {
 
 
 function obtenerSite(){
-    var idParam = $.urlParam('id');
+    var id = $.urlParam('id');
     $.ajax(//Manda a llamar el script php
         {
-            url: 'controllers/getSiteController.php?',//Ubicación del script
-            data: {id: idParam},
+            url: 'controllers/getSiteController.php',//Ubicación del script
+            data: {id: id},
             dataType: 'html',//Tipo de datos de salida
             type: 'GET',//Forma en la que se mandaran losdatos de entradas
             success: obtenerSiteSuccess,//Función a realizar en caso de obtener los datos de salida de manera exitosa
@@ -19,11 +19,11 @@ function obtenerSite(){
 }
 
 function obtenerOpiniones(){
-    var idParam = $.urlParam('id');
+    var id = $.urlParam('id');
     $.ajax(//Manda a llamar el script php
         {
             url: 'controllers/getOpinionsController.php?',//Ubicación del script
-            data: {id: idParam},
+            data: {id: id},
             dataType: 'html',//Tipo de datos de salida
             type: 'GET',//Forma en la que se mandaran losdatos de entradas
             success: obtenerOpinionesSuccess,//Función a realizar en caso de obtener los datos de salida de manera exitosa

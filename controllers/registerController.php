@@ -18,19 +18,19 @@
 
             if(move_uploaded_file($tmp,$path)) 
             {
-            echo "<img src='$path' />";
-            $name = $_POST['name'];
-            $username = $_POST['username'];
-            $age = $_POST['age'];
-            $gender = $_POST['gender'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+                echo "<img src='$path' />";
+                $name = $_POST['name'];
+                $username = $_POST['username'];
+                $age = $_POST['age'];
+                $gender = $_POST['gender'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
 
-            //insert form data in the database
-            $sql = "INSERT INTO pf_usuarios(nombre, username, edad, genero, foto, correo, contrasenia) VALUES('$name', '$username', $age , '$gender','$path','$email', '$password')";
-            $result = mysqli_query($db,$sql) or die(mysqli_error($db));
-            echo $result;
-            //echo $insert?'ok':'err';
+                //insert form data in the database
+                $sql = "INSERT INTO pf_usuarios(nombre, username, edad, genero, foto, correo, contrasenia) VALUES('$name', '$username', $age , '$gender','$path','$email', '$password')";
+                $result = mysqli_query($db,$sql) or die(mysqli_error($db));
+                echo $result;
+                //echo $insert?'ok':'err';
             }
         } else {
             echo 'Extensión de archivo inválida';

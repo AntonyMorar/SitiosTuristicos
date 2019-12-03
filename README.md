@@ -1,4 +1,6 @@
-![Sitios Turísticos](./src/images/sitiosLogo.png?style=centerme)
+<p align="center">
+  <img src="./src/images/sitiosLogo.png">
+</p>
 
 Creado: @antony999k
 

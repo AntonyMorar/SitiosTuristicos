@@ -13,11 +13,17 @@ $(document).ready(function (e) {
             },
             success: function (data) {
                 if (data) {
-                    $("#error").html(data)
-                    $("#succes").html("Usuario registrado con éxito. Ir al inicio de sesión");
+                    $("#register").val('Registrarse')
+                    if(data == 1){
+                        $("#succes").html("Usuario registrado con éxito. Ir al inicio de sesión");
+                    }else{
+                        $("#error").html(data);
+                    }
+                    $("#regForm")[0].reset(); // Pone en blanco todos los campos del formulario
                 } else {
                     $("#register").val('Registrarse')
                     $("#error").html("Error al crear un nuevo usuario, intenta de nuevo más tarde.");
+                    $("#regForm")[0].reset(); // Pone en blanco todos los campos del formulario
                 }
             }
         });

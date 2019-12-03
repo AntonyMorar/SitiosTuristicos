@@ -17,12 +17,12 @@
         if($ranking <= -1){
             $query = "SELECT u.*, AVG(o.calificacion) AS ranking
             FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio
-            WHERE (u.nombre LIKE '%$search%') AND (U.categoria LIKE '%$category%') AND (u.ubicacion LIKE '%$ubication%')
+            WHERE (u.nombre LIKE '%$search%') AND (u.categoria LIKE '%$category%') AND (u.ubicacion LIKE '%$ubication%')
             GROUP BY u.idSitio";
         }else{
             $query = "SELECT u.*, AVG(o.calificacion) AS ranking
             FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio
-            WHERE (u.nombre LIKE '%$search%') AND (U.categoria LIKE '%$category%') AND (u.ubicacion LIKE '%$ubication%')
+            WHERE (u.nombre LIKE '%$search%') AND (u.categoria LIKE '%$category%') AND (u.ubicacion LIKE '%$ubication%')
             GROUP BY u.idSitio
             HAVING AVG(o.calificacion) BETWEEN $ranking AND $ranking_top"; //Armamos query
         }

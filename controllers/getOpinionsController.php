@@ -9,7 +9,7 @@
         // Cargamos el parametro id y lo guardamos en una variable
         $siteID = $_GET["id"];
         //Armamos query
-        $query = "SELECT op.idOpinion, op.opinión, op.calificación, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
+        $query = "SELECT op.idOpinion, op.opinion, op.calificacion, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
         INNER JOIN pf_usuarios AS us ON us.idUsuario = op.idUsuario
         WHERE op.idSitio = $siteID";
         //Ejecutamos query
@@ -22,8 +22,8 @@
                 
             // Desplegamos la informacion de cada presidentes
             $template->setVariable("ID", $line['idOpinion']);
-            $template->setVariable("OPINION", $line['opinión']);
-            $template->setVariable("CALIF", $line['calificación']);
+            $template->setVariable("OPINION", $line['opinion']);
+            $template->setVariable("CALIF", $line['calificacion']);
             $template->setVariable("FECHA", $line['fecha']);
             $template->setVariable("IDUSUARIO", $line['idUsuario']);
             $template->setVariable("NOMBREUSUARIO", $line['nombre_usuario']);

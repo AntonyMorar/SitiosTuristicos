@@ -15,20 +15,20 @@
         $ranking_top = $ranking + 1;
 
         if($ranking <= -1){
-            $query = "SELECT u.*, AVG(o.calificación) AS ranking
+            $query = "SELECT u.*, AVG(o.calificacion) AS ranking
             FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio
-            WHERE (u.nombre LIKE '%$search%') AND (U.categoría LIKE '%$category%') AND (u.ubicación LIKE '%$ubication%')
+            WHERE (u.nombre LIKE '%$search%') AND (U.categoria LIKE '%$category%') AND (u.ubicacion LIKE '%$ubication%')
             GROUP BY u.idSitio";
         }else{
-            $query = "SELECT u.*, AVG(o.calificación) AS ranking
+            $query = "SELECT u.*, AVG(o.calificacion) AS ranking
             FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio
-            WHERE (u.nombre LIKE '%$search%') AND (U.categoría LIKE '%$category%') AND (u.ubicación LIKE '%$ubication%')
+            WHERE (u.nombre LIKE '%$search%') AND (U.categoria LIKE '%$category%') AND (u.ubicacion LIKE '%$ubication%')
             GROUP BY u.idSitio
-            HAVING AVG(o.calificación) BETWEEN $ranking AND $ranking_top"; //Armamos query
+            HAVING AVG(o.calificacion) BETWEEN $ranking AND $ranking_top"; //Armamos query
         }
 
         //Ejecutamos query
-        $result = mysqli_query($db, $query) or die("La consulta de sitios fallo");
+        $result = mysqli_query($db, $query) or die("La consulta de sitios falló");
         //Deslpegamos query
         while($line = mysqli_fetch_assoc($result))
         {
@@ -38,7 +38,7 @@
             // Desplegamos la informacion de cada presidentes
             $template->setVariable("ID", $line['idSitio']);
             $template->setVariable("NOMBRE", $line['nombre']);
-            $template->setVariable("UBICACION", $line['ubicación']);
+            $template->setVariable("UBICACION", $line['ubicacion']);
             $template->setVariable("RANKING", $line['ranking']);
             
             $template->parseCurrentBlock("FILA");

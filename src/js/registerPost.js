@@ -13,7 +13,8 @@ $(document).ready(function (e) {
             },
             success: function (data) {
                 if (data) {
-                    $("#succes").html("You are registered successfully. Go to login");
+                    $("#error").html(data)
+                    $("#succes").html("Usuario registrado con éxito. Ir al inicio de sesión");
                 } else {
                     $("#register").val('Registrarse')
                     $("#error").html("Error al crear un nuevo usuario, intenta de nuevo más tarde.");

@@ -4,14 +4,14 @@
 
       if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $sql = "SELECT idUsuario, tipo_usuario, nombre, username, edad, género, foto, correo, fecha_registro FROM pf_usuarios WHERE idUsuario='$id'";
+        $sql = "SELECT idUsuario, tipo_usuario, nombre, username, edad, genero, foto, correo, fecha_registro FROM pf_usuarios WHERE idUsuario='$id'";
         $result = mysqli_query($db,$sql);
         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
         { 
           $name=$row['nombre'];
           $username=$row['username'];
           $age=$row['edad'];
-          $gender=$row['género'];
+          $gender=$row['genero'];
           $email=$row['correo'];
           $register_date=$row['fecha_registro'];
           $rel_register_date=findTimeAgo($register_date);

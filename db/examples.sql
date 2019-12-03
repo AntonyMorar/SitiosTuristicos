@@ -3,11 +3,11 @@
  ****************************************************/
 DROP TABLE pf_usuarios;
 DROP TABLE pf_listacontactos;
-
 DROP TABLE pf_sitios;
 DROP TABLE pf_opiniones;
 DROP TABLE pf_fotositios;
 DROP TABLE pf_busquedas;
+
 
 /* Borrar datos de una tabla
  ****************************************************/
@@ -34,15 +34,15 @@ SELECT idUsuario, nombre, username, foto FROM pf_usuarios WHERE (idUsuario <> 2)
 /* Buscar sitios */
 SELECT * FROM pf_sitios WHERE (nombre LIKE '%chi%');
 
-/* Buscar sitios + Promedio calificación */
-SELECT u.*, AVG(o.calificación) AS ranking
+/* Buscar sitios + Promedio calificacion */
+SELECT u.*, AVG(o.calificacion) AS ranking
 FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio
-WHERE (u.nombre LIKE '%chi%') AND (U.categoría LIKE '%%') AND (u.ubicación LIKE '%%')
+WHERE (u.nombre LIKE '%chi%') AND (U.categoria LIKE '%%') AND (u.ubicacion LIKE '%%')
 GROUP BY u.idSitio
-HAVING AVG(o.calificación) BETWEEN 4 AND 5
+HAVING AVG(o.calificacion) BETWEEN 0 AND 5
 
-/* Buscar un sitio específico */
-SELECT u.*, AVG(o.calificación) AS ranking
+/* Buscar un sitio especifico */
+SELECT u.*, AVG(o.calificacion) AS ranking
         FROM pf_sitios u LEFT OUTER JOIN pf_opiniones o ON u.idSitio = o.idSitio
         WHERE u.idSitio = 9
         GROUP BY u.idSitio
@@ -54,19 +54,23 @@ INNER JOIN pf_usuarios AS cont ON list.idContacto = cont.idUsuario
 WHERE u.idUsuario = 2;
 
 /* Lista de Opiniones */
-SELECT op.idOpinion, op.opinión, op.calificación, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
+SELECT op.idOpinion, op.opinion, op.calificacion, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
 INNER JOIN pf_usuarios AS us ON us.idUsuario = op.idUsuario
 WHERE op.idSitio = 9;
 
 /* Insertar many to many
  *****************************************************/
-INSERT INTO pf_usuarios (nombre, username, edad, género, foto, correo, contraseña) VALUES ('Jesus Nzatet', 'minijisus', 2000, 'M','foto.jpg', 'jisus@gmail.com', '12345');
+INSERT INTO pf_usuarios (nombre, username, edad, género, foto, correo, contrasenia) VALUES ('Jesus Nzatet', 'minijisus', 2000, 'M','foto.jpg', 'jisus@gmail.com', '12345');
 INSERT INTO pf_listacontactos (idUsuario, idContacto) VALUES (2,1);
 
 /* Insertar Sitio
  ***************************************************/
-INSERT INTO pf_sitios (nombre, categoría, ubicación, descripción, lat, longitud) VALUES ('Parque Nacional Manuel Antonio', 'Selva', 'Puntarenas', 'El pequeño gran pulmón de la costa costarricense es llamado el Parque Nacional Manuel Antonio y cerca de él se puede conseguir el poblado de Quepos.', 48.8667, 2.3333)
+INSERT INTO pf_sitios (nombre, categoria, ubicacion, descripcion, lat, longitud) VALUES ('Parque Nacional Manuel Antonio', 'Selva', 'Puntarenas', 'El pequenio gran pulmon de la costa costarricense es llamado el Parque Nacional Manuel Antonio y cerca de él se puede conseguir el poblado de Quepos.', 48.8667, 2.3333)
 
 /* Insertar Opinion
  ***************************************************/
-INSERT INTO pf_opiniones (idSitio, idUsuario, opinión, calificación) VALUES (9,2,'Ya fui dos veces y hasta remodelaron el lugar',5);
+INSERT INTO pf_opiniones (idSitio, idUsuario, opinion, calificacion) VALUES (9,2,'Ya fui dos veces y hasta remodelaron el lugar',5);
+
+/* Crear una resenia
+ ***************************************************/
+INSERT INTO pf_opiniones (idSitio, idUsuario, opinion, calificacion) VALUES (13, 2, 'Está hermoso, nunca habia salido del pais, me encanto estar con mi ruka', 3);

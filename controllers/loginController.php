@@ -1,14 +1,13 @@
 <?php
     include("../config/dbs.php");
     session_start();
-
     if(isset($_POST['username']) && isset($_POST['password'])){
         // username and password sent from form 
         $username=mysqli_real_escape_string($db,$_POST['username']); 
         $password=mysqli_real_escape_string($db,$_POST['password']); 
 
-        $sql = "SELECT idUsuario FROM pf_usuarios WHERE username = '$username' and contraseña = '$password'";
-        $result = mysqli_query($db,$sql) or die("La consulta de login fallo");
+        $sql = "SELECT idUsuario FROM pf_usuarios WHERE username = '$username' and contrasenia = '$password'";
+        $result = mysqli_query($db,$sql) or die(mysqli_error($db));
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
         $count=mysqli_num_rows($result);
         

@@ -22,40 +22,39 @@ if(!empty($_SESSION['login_user']))
          <form method="post" id="regForm" enctype="multipart/form-data">
             <div class="inputPairDouble">
                <div class="inputPair">
-                  <label for="username">*Username</label><input type="text" name="username" id="username" class="box" />
+                  <label for="username">*Username</label><input type="text" name="username" id="username" />
                </div>
                <div class="inputPair">
-                  <label for="email">*Correo</label><input type="email" name="email" id="email" class="box" />
+                  <label for="email">*Correo</label><input type="email" name="email" id="email"/>
                </div>
             </div>
 
             <div class="inputPairDouble">
                <div class="inputPair">
-                  <label for="password">*Contraseña</label><input type="password" name="password" id="password"
-                     class="box" />
+                  <label for="password">*Contraseña</label><input type="password" name="password" id="password"/>
                </div>
                <div class="inputPair">
-                  <label for="name">*Nombre Completo</label><input type="text" name="name" id="name" class="box" />
+                  <label for="name">*Nombre Completo</label><input type="text" name="name" id="name" />
                </div>
             </div>
 
             <div class="inputPairDouble">
                <div class="inputPair short">
-                  <label for="age">*Edad</label><input type="number" name="age" id="age" class="box" min="0" max="120" />
+                  <label for="age">*Edad</label><input type="number" name="age" id="age"  min="0" max="120" />
                </div>
                <div class="inputPair">
                   <label>*Género</label>
                   <div class="inputGender">
-                     <input type="radio" name="gender" class="box" id="M" value="M" /><label for="M">Hombre</label>
-                     <input type="radio" name="gender" class="box" value="F" id="F"><label for="F">Mujer</label>
-                     <input type="radio" name="gender" class="box" value="B" id="B"><label for="B">No binario</label>
-                     <input type="radio" name="gender" class="box" value="O" id="O"><label for="O">No Revelar</label>
+                     <input type="radio" name="gender"id="M" value="M" /><label for="M">Hombre</label>
+                     <input type="radio" name="gender"  value="F" id="F"><label for="F">Mujer</label>
+                     <input type="radio" name="gender"  value="B" id="B"><label for="B">No binario</label>
+                     <input type="radio" name="gender"  value="O" id="O"><label for="O">No Revelar</label>
                   </div>
                </div>
             </div>
 
             <div class="inputPair">
-               <label>Foto de perfil</label><input type="file" id="file" name="file" class="box" />
+               <label>Foto de perfil</label><input type="file" accept="image/*" name="image"  id="uploadImage"/>
             </div>
             <input type="submit" value="Registrarse" id="register" class="buttonGen" />
          </form>

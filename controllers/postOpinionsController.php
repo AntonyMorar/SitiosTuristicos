@@ -11,7 +11,7 @@
         $opinion=$_POST['opinion'];
         $idSitio=$_POST['idSitio'];
 
-        $query = "INSERT INTO pf_opiniones (idSitio, idUsuario, opinión, calificación) VALUES ($idSitio, $userID, '$opinion', $ranking)";
+        $query = "INSERT INTO pf_opiniones (idSitio, idUsuario, opinion, calificacion) VALUES ($idSitio, $userID, '$opinion', $ranking)";
         echo $query;
         //Ejecutamos query
         $result = mysqli_query($db, $query) or die("Fallo al ingresar nueva opinion");

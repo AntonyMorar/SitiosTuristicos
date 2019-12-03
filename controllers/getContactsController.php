@@ -8,7 +8,7 @@
     $template->loadTemplatefile("contactList.html", true, true);
     
     //Armamos query
-    $query = "SELECT cont.idUsuario, cont.nombre, cont.username, cont.edad, cont.género, cont.foto, cont.correo, cont.fecha_registro FROM pf_listacontactos AS list
+    $query = "SELECT cont.idUsuario, cont.nombre, cont.username, cont.edad, cont.genero, cont.foto, cont.correo, cont.fecha_registro FROM pf_listacontactos AS list
     JOIN pf_usuarios AS u ON list.idUsuario = u.idUsuario
     JOIN pf_usuarios AS cont ON list.idContacto = cont.idUsuario
     WHERE u.idUsuario = $userID";

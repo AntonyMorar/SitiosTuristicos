@@ -7,6 +7,7 @@
    define('DB_DATABASE', 'ib15nrh');
    define('DB_CHARSET', 'utf8');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+   mysqli_set_charset($db, DB_CHARSET);
 
    if (!$db) {
       echo "Error: No se pudo conectar a MySQL." . PHP_EOL;

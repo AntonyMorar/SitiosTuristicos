@@ -8,7 +8,7 @@
         $contactID=mysqli_real_escape_string($db,$_POST['id']);
 
         $sql = "INSERT INTO pf_listacontactos (idUsuario, idContacto) VALUES ('$userID','$contactID')";
-        $result = mysqli_query($db,$sql) or die("La consulta de añadir contactos fallo");
+        $result = mysqli_query($db,$sql) or die("La consulta de añadir contactos falló");
         echo $result;
     }
 ?>

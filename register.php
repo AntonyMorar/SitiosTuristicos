@@ -54,7 +54,6 @@ if(!empty($_SESSION['login_user']))
                </div>
             </div>
 
-
             <div class="inputPair">
                <label>Foto de perfil</label><input type="file" id="file" name="file" class="box" />
             </div>

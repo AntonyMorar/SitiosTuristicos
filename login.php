@@ -35,7 +35,7 @@ if(!empty($_SESSION['login_user']))
 				
             <div style = "margin:30px">
                
-               <form action ="" method = "post" id="loginForm">
+               <form  method = "post" id="loginForm">
                   <label>Usuario  :</label><input type = "text" name = "username" class = "box" id="username"/><br /><br />
                   <label>Contraseña  :</label><input type = "password" name = "password" class = "box" id="password"/><br/><br />
                   <input type = "submit" value = "Iniciar Sesíon" id="login"/><br />

@@ -21,14 +21,14 @@
             $template->setCurrentBlock("FILA");
                 
             // Desplegamos la informacion de cada presidentes
-            $template->setVariable("ID", utf8_encode($line['idOpinion']));
-            $template->setVariable("OPINION", utf8_encode($line['opinión']));
-            $template->setVariable("CALIF", utf8_encode($line['calificación']));
-            $template->setVariable("FECHA", utf8_encode($line['fecha']));
+            $template->setVariable("ID", $line['idOpinion']);
+            $template->setVariable("OPINION", $line['opinión']);
+            $template->setVariable("CALIF", $line['calificación']);
+            $template->setVariable("FECHA", $line['fecha']);
             $template->setVariable("IDUSUARIO", $line['idUsuario']);
-            $template->setVariable("NOMBREUSUARIO", utf8_encode($line['nombre_usuario']));
-            $template->setVariable("USERNAME", utf8_encode($line['username']));
-            $template->setVariable("FOTO_USUARIO", utf8_encode($line['foto_usuario']));
+            $template->setVariable("NOMBREUSUARIO", $line['nombre_usuario']);
+            $template->setVariable("USERNAME", $line['username']);
+            $template->setVariable("FOTO_USUARIO", $line['foto_usuario']);
             
             $template->parseCurrentBlock("FILA");
         }

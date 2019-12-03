@@ -1,4 +1,10 @@
-/* Sitios */
+/* Usuarios 
+***************************************************/
+INSERT INTO pf_usuarios (nombre, username, edad, género, foto, correo, contraseña) VALUES ('Jesus Nzatet', 'minijisus', 2000, 'M','foto.jpg', 'jisus@gmail.com', '12345');
+INSERT INTO pf_usuarios (nombre, username, edad, género, foto, correo, contraseña) VALUES ('Jesus Nzatet', 'minijisus', 2000, 'M','foto.jpg', 'jisus@gmail.com', '12345');
+
+/* Sitios 
+***************************************************/
 INSERT INTO pf_sitios (nombre, categoría, ubicación, descripción, lat, longitud) VALUES ('París', 'Ciudad', 'París', 'París, la capital de Francia, es una importante ciudad europea y un centro mundial del arte, la moda, la gastronomía y la cultura. Su paisaje urbano del siglo XIX está entrecruzado por amplios bulevares y el río Sena. Aparte de estos hitos, como la Torre Eiffel y la catedral gótica de Notre Dame del siglo XII, la ciudad es famosa por su cultura del café y las tiendas de moda de diseñador a lo largo de la calle Rue du Faubourg Saint-Honoré.', 48.8667, 2.3333);
 INSERT INTO pf_sitios (nombre, categoría, ubicación, descripción, lat, longitud) VALUES ('Playa del Carmen', 'Playa,', 'Quintana Roo', 'Playa del Carmen es considerado el Corazón de la Riviera Maya y por tal motivo no puedes irte de aquí sin conocer uno de los lugares turísticos de México más famosos de esta zona. Esta playa se ubica en la cabecera del municipio de Solidaridad en Quintana Roo, al sureste del país.', 20.6274,  -87.07987);
 INSERT INTO pf_sitios (nombre, categoría, ubicación, descripción, lat, longitud) VALUES ('Chichén Itzá', 'Arquitectura', 'Yucatán', 'Ubicado al norte de la Península de Yucatán, podrás encontrar Chichén Itzá, la ciudad mexicana más famosa del mundo y la segunda zona arqueológica más visitada. Se encuentra a una hora en carro de la ciudad de Mérida y es el lugar perfecto para conocer la cultura e historia azteca. Además, fue nombrado Patrimonio Cultural de la Humanidad en 1988.', 48.8667, 2.3333);
@@ -13,4 +19,5 @@ INSERT INTO pf_sitios (nombre, categoría, ubicación, descripción, lat, longit
 INSERT INTO pf_opiniones (idSitio, idUsuario, opinión, calificación) VALUES (9,2,'Muy bonito lugar, recomendado para toda la familia',4);
 INSERT INTO pf_opiniones (idSitio, idUsuario, opinión, calificación) VALUES (9,1,'Mus sucio el lugar, no voy otra vez',1);
 INSERT INTO pf_opiniones (idSitio, idUsuario, opinión, calificación) VALUES (9,2,'Ya fui dos veces y hasta remodelaron el lugar',5);
+INSERT INTO pf_opiniones (idSitio, idUsuario, opinión, calificación) VALUES (13, 2, 'Está hermoso, nunca había salido del país, me encanto estar con mi ruka', 5)
 

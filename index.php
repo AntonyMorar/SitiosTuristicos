@@ -15,7 +15,7 @@
         <h1>Sitios Turísticos</h1>
 
         <div id="search">
-            <form enctype="multipart/form-data" id="searchForm">
+            <form id="searchForm">
                 <input type="text" name="search" placeholder="Buscar..." required>
                 <p>Filtrar por:</p>
                 <label for="ubication">Ubicación:</label>

@@ -339,3 +339,66 @@ a.effect-underline:hover:after {
 .login .loginCard .inputGender label {
     font-size: 11px;
 }
+
+/* Profile
+---------------------------------------------------------------*/
+.profile {}
+
+.profile .profileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.profile .profilePic {
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    border-radius: 100px;
+    background-color: #ccc;
+}
+
+.profile .profilePic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.profile .profilePic img[alt] {
+    font-size: 9px;
+    color: eee;
+    line-height: 200px;
+    text-align: center;
+}
+
+.profile .name {
+    margin-bottom: 5px;
+}
+
+.profile .username {
+    color: #707070;
+    margin-bottom: 15px;
+}
+
+.profile .subInfo {
+    display: flex;
+}
+
+.profile .subInfo p{
+    margin-bottom: 0;
+}
+
+.profile .subInfo .subInfoInner{
+    display: flex;
+    align-items: center;
+}
+
+.profile .subInfo .subInfoInner span{
+    margin-right: 5px;
+}
+
+.profile .subInfo div {
+    margin-right: 15px;
+}

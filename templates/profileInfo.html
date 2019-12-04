@@ -1,9 +1,26 @@
-<div>
-    <img src="{FOTO}" alt="{NOMBRE}">
-    <h1>{NOMBRE}</h1>
-    <p>@{USERNAME}</p>
-    <p>{EDAD}</p>
-    <p>{GENERO}</p>
-    <P>{CORREO}</P>
-    <p>{FECHA_REGISTRO}</p>
+<div class="profile">
+    <div class="profileHeader">
+        <div class="profilePic">
+            <img src="{FOTO}" alt="{NOMBRE}">
+        </div>
+        <div>
+            <h3 class="name">{NOMBRE}</h3>
+            <p class="username">@{USERNAME}</p>
+
+            <div class="subInfo">
+                <div class="subInfoInner">
+                    <p>{EDAD} Años</p>
+                </div>
+                <div class="subInfoInner">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <p>{CORREO}</p>
+                </div>
+                <div class="subInfoInner">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p class="date">Se unio hace {FECHA_REGISTRO}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

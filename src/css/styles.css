@@ -45,6 +45,7 @@ select {
     background: -ms-linear-gradient(left, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
     background: linear-gradient(to right, rgba(40, 117, 249, 1) 0%, rgba(84, 57, 219, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2875f9', endColorstr='#5439db', GradientType=1);
+    height: 100%;
 }
 
 .buttonGen:hover {
@@ -56,6 +57,8 @@ select {
     background: -ms-linear-gradient(left, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
     background: linear-gradient(to right, rgba(86, 146, 251, 1) 0%, rgba(114, 91, 225, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5692fb', endColorstr='#725be1', GradientType=1);
+    text-decoration: none;
+    color: white;
 }
 
 .buttonGen:active {
@@ -63,7 +66,7 @@ select {
 }
 
 #results {
-    padding: 20px 60px;
+    padding: 50px 60px;
 }
 
 .errorGlobal {
@@ -77,6 +80,24 @@ select {
     color: #78d65c;
     margin-top: 10px;
 }
+
+img[alt] {
+    font-size: 9px;
+    text-align: center;
+}
+
+.titleContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.titleContainer .title{
+    margin-right: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 
 /* Header
 ---------------------------------------------------------------*/
@@ -348,7 +369,6 @@ a.effect-underline:hover:after {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
 }
 
 .profile .profilePic {
@@ -364,13 +384,6 @@ a.effect-underline:hover:after {
     height: 100%;
     object-fit: cover;
     border-radius: 100px;
-}
-
-.profile .profilePic img[alt] {
-    font-size: 9px;
-    color: eee;
-    line-height: 200px;
-    text-align: center;
 }
 
 .profile .name {
@@ -401,4 +414,58 @@ a.effect-underline:hover:after {
 
 .profile .subInfo div {
     margin-right: 15px;
+}
+
+/* Contact List & Seach contact
+---------------------------------------------------------------*/
+.contactList{
+}
+
+.contactList .contact{
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.contactList .contact:first-child{
+    padding-top: 0px;
+}
+
+.contactList .contact p{
+    margin-bottom: 0;
+}
+
+.contactList .contact .nombre,
+.contactList .contact .username{
+    margin-right: 10px;
+}
+
+.contactList .contact .profilePic {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 100px;
+    background-color: #ccc;
+}
+
+.contactList .contact .profilePic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.contactFullIn{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2;
+}
+
+.searchContact{
+    padding: 50px 60px 0;
+}
+
+.searchContact h1{
+    margin-top: 0;
 }

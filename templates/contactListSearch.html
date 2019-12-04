@@ -1,12 +1,14 @@
-<table>
+<div class="contactList">
     <!-- BEGIN FILA -->
-        <tr>
-            <td>
-                <a href="profile.php?id={ID}">{NOMBRE} {USERNAME} {FOTO}</a>
-            </td>
-            <td>
-                <button onclick="agregarContacto({ID})">Añadir</button>
-            </td>
-        </tr>
+    <div class="contact">
+        <div class="profilePic">
+                <img src="{FOTO}" alt="{NOMBRE}">
+        </div>
+        <p class="nombre">{NOMBRE}</p>
+        <a href="profile.php?id={ID}" class="username">@{USERNAME}</a>
+        <div class="contactFullIn">
+            <button onclick="agregarContacto({ID})" class="buttonGen">Añadir</button>
+        </div>
+    </div>
     <!-- END FILA -->
-</table>
+</div>

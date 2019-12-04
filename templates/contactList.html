@@ -1,9 +1,16 @@
-<table>
+<div class="titleContainer">
+    <h1 class="title">Lista de contactos</h1>
+    <a href="searchContact.php" class="buttonGen">Buscar más contactos</a>
+</div>
+
+<div class="contactList">
     <!-- BEGIN FILA -->
-        <tr>
-            <td>
-                <a href="profile.php?id={ID}">{NOMBRE} {USERNAME} {FOTO}</a>
-            </td>
-        </tr>
+    <div class="contact">
+        <div class="profilePic">
+            <img src="{FOTO}" alt="{NOMBRE}">
+        </div>
+        <p class="nombre">{NOMBRE}</p>
+        <a href="profile.php?id={ID}" class="username">@{USERNAME}</a>
+    </div>
     <!-- END FILA -->
-</table>
+</div>

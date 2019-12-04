@@ -11,8 +11,7 @@
 <body>
     <div id="root">
         <?php include("templates/header.php");?>
-        <h1>Lista de contactos</h1>
-        <a href="searchContact.php">Buscar contactos</a>
+
 
         <div id="results"></div>
     </div>

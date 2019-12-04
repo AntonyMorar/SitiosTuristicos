@@ -11,8 +11,8 @@
 <body>
     <div id="root">
         <?php include("templates/header.php");?>
-        <div class="searchContact">
-            <h1>Buscar Contactos</h1>
+        <div class="titleContainer">
+            <h1 class="title">Buscar Contactos</h1>
             <input type="text" name="contacto" placeholder="Nombre del contacto" onkeyup="Actualizar(this.value)">
         </div>
 

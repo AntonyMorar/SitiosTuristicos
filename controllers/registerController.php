@@ -16,7 +16,7 @@
         $tmp = $_FILES["image"]["tmp_name"]; //Guarda el nombre del archivo temporal
 
         $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION)); // Obtener la extensión del archivo cargado
-        $final_image = rand(1000,1000000).$username.$ext;
+        $final_image = rand(1000,1000000).$username.'.'.$ext;
 
         // Verificat si la extensión es válida
         if(in_array($ext, $valid_extensions)) { 

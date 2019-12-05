@@ -14,12 +14,14 @@
         <?php include("templates/adminNav.html");?>
         
         <div class="titleContainer">
-            <h1 class="title">Todos los usuarios</h1>
+            <h1 class="title">Todos los sitios</h1>
+            <button class="buttonGen">Agregar Sitio</button>
         </div>
         <div id="results"></div>
     </div>
 
     <!--===============================================================================================-->
+    <script src="src/js/sitesAdminGet.js"></script>
 
 </body>
 

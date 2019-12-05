@@ -21,9 +21,9 @@
 		$template->setCurrentBlock("FILA");
 		 	
 		// Desplegamos la informacion de cada presidentes
-		$template->setVariable("NOMBRE", utf8_encode($line['nombre']));
-		$template->setVariable("USERNAME", utf8_encode($line['username']));
-		$template->setVariable("FOTO", utf8_encode($line['foto']));
+		$template->setVariable("NOMBRE", $line['nombre']);
+		$template->setVariable("USERNAME", $line['username']);
+		$template->setVariable("FOTO", $line['foto']);
         $template->setVariable("ID", $line['idUsuario']);
         
         $template->parseCurrentBlock("FILA");

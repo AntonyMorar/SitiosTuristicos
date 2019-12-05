@@ -66,7 +66,7 @@ select {
 }
 
 #results {
-    padding: 50px 60px;
+    padding: 40px 60px;
 }
 
 .errorGlobal {
@@ -86,16 +86,41 @@ img[alt] {
     text-align: center;
 }
 
-.titleContainer{
+.titleContainer {
     display: flex;
     align-items: center;
     padding: 50px 60px 0;
 }
 
-.titleContainer .title{
+.titleContainer .title {
     margin-right: 30px;
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+.tooltipA {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipA .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: -50px;
+}
+
+.tooltipA:hover .tooltiptext {
+    visibility: visible;
 }
 
 /* Header
@@ -176,7 +201,7 @@ a.effect-underline:hover:after {
     transform: scale(1);
 }
 
-.effect-underline span{
+.effect-underline span {
     margin-right: 9px;
 }
 
@@ -364,7 +389,7 @@ a.effect-underline:hover:after {
     padding: 0 15px;
 }
 
-.login .loginCard .inputGender input{
+.login .loginCard .inputGender input {
     width: 100px !important;
 }
 
@@ -410,16 +435,16 @@ a.effect-underline:hover:after {
     display: flex;
 }
 
-.profile .subInfo p{
+.profile .subInfo p {
     margin-bottom: 0;
 }
 
-.profile .subInfo .subInfoInner{
+.profile .subInfo .subInfoInner {
     display: flex;
     align-items: center;
 }
 
-.profile .subInfo .subInfoInner span{
+.profile .subInfo .subInfoInner span {
     margin-right: 5px;
 }
 
@@ -429,26 +454,25 @@ a.effect-underline:hover:after {
 
 /* Contact List & Seach contact
 ---------------------------------------------------------------*/
-.contactList{
-}
+.contactList {}
 
-.contactList .contact{
+.contactList .contact {
     display: flex;
     align-items: center;
     padding: 11px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.contactList .contact:first-child{
+.contactList .contact:first-child {
     padding-top: 0px;
 }
 
-.contactList .contact p{
+.contactList .contact p {
     margin-bottom: 0;
 }
 
 .contactList .contact .nombre,
-.contactList .contact .username{
+.contactList .contact .username {
     margin-right: 10px;
 }
 
@@ -467,8 +491,80 @@ a.effect-underline:hover:after {
     border-radius: 100px;
 }
 
-.contactFullIn{
+.contactFullIn {
     display: flex;
     justify-content: flex-end;
     flex-grow: 2;
+}
+
+/* Admin Nav
+---------------------------------------------------------------*/
+.adminNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    font-size: 1.5em;
+    background-color: #404447;
+}
+
+.adminNav a{
+    color: white;
+    margin-right: 40px;
+}
+
+.adminNav a:hover{
+    color: #ccc;
+}
+
+.adminNav a:last-child{
+    margin-right: 0px;
+}
+
+/* Admin Tables
+---------------------------------------------------------------*/
+.adminTable {
+    width: 100%;
+}
+
+.adminTable .editTitle {
+    color: rgba(84, 57, 219, 1);
+}
+
+.adminTable tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.adminTable tr td {
+    padding: 12px 0;
+}
+
+.adminTable tr .editIcons {
+    padding: 12px 8px;
+}
+
+.adminTable tr .editIcons .glyphicon {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.adminTable tr .editIcons .trash {
+    color: rgb(204, 59, 59);
+}
+
+.adminTable tr .editIcons .trash:hover {
+    color: rgb(128, 28, 28) !important;
+}
+
+.adminTable tr .editIcons .glyphicon:hover {
+    color: rgba(84, 57, 219, 1);
+}
+
+
+.adminTable tr td p {
+    margin-bottom: 0;
+}
+
+.adminTable tr td:last-child {
+    border-left: 1px solid #ccc;
 }

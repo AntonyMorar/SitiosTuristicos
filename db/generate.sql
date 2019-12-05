@@ -41,16 +41,17 @@ CREATE TABLE IF NOT EXISTS `pf_opiniones` (
   `calificacion` float(4,3) DEFAULT NULL,
   `fecha` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idOpinion`),
-  FOREIGN KEY (`idSitio`) REFERENCES pf_sitios(`idSitio`),
-  FOREIGN KEY (`idUsuario`) REFERENCES pf_usuarios(`idUsuario`)
+  FOREIGN KEY (`idSitio`) REFERENCES pf_sitios(`idSitio`) ON DELETE CASCADE,
+  FOREIGN KEY (`idUsuario`) REFERENCES pf_usuarios(`idUsuario`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS `pf_fotositios` (
   `idFoto` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `idSitio` int(10) unsigned NOT NULL,
-  `foto` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`idFoto`)
+  `foto` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`idFoto`),
+  FOREIGN KEY (`idSitio`) REFERENCES pf_sitios(`idSitio`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `pf_busquedas` (
@@ -61,5 +62,6 @@ CREATE TABLE IF NOT EXISTS `pf_busquedas` (
   `ubicacion` varchar(30) DEFAULT NULL,
   `calificacion` float(3,1) DEFAULT NULL,
   `fecha` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`idBusqueda`)
+  PRIMARY KEY (`idBusqueda`),
+  FOREIGN KEY (`idUsuario`) REFERENCES pf_usuarios(`idUsuario`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;

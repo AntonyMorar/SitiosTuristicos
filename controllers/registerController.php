@@ -9,22 +9,21 @@
         $username = $_POST['username'];
         $age = $_POST['age'];
         $gender = $_POST['gender'];
-        $email = $_POST['email'];
+        $email = strtolower($_POST['email']);
         $password = $_POST['password'];
 
         $img = $_FILES["image"]["name"]; //Guarda la imágen original del cliente
         $tmp = $_FILES["image"]["tmp_name"]; //Guarda el nombre del archivo temporal
-        $errorimg = $_FILES["image"][“error”]; // Almacena cualquier código de error
 
         $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION)); // Obtener la extensión del archivo cargado
-        $final_image = rand(1000,1000000).$username;
+        $final_image = rand(1000,1000000).$username.$ext;
 
         // Verificat si la extensión es válida
         if(in_array($ext, $valid_extensions)) { 
             $path = $path.strtolower($final_image); 
 
-            if(move_uploaded_file($tmp,$path)) 
-            {
+            if(move_uploaded_file($tmp,$path)) {
+                $path = substr($path, 1);
                 //insert form data in the database
                 $sql = "INSERT INTO pf_usuarios(nombre, username, edad, genero, foto, correo, contrasenia) VALUES('$name', '$username', $age , '$gender','$path','$email', '$password')";
                 $result = mysqli_query($db,$sql) or die(mysqli_error($db));
@@ -32,12 +31,12 @@
                 //echo $insert?'ok':'err';
             }
         } else if($_FILES["image"]["size"] == 0){ //Cuando no se selecciona ninguna imagen de perfil se asigna una temporal
-            $path = '../src/images/profileTemp.png'; 
+            $path = './src/images/profileTemp.png'; 
             $sql = "INSERT INTO pf_usuarios(nombre, username, edad, genero, foto, correo, contrasenia) VALUES('$name', '$username', $age , '$gender','$path','$email', '$password')";
             $result = mysqli_query($db,$sql) or die(mysqli_error($db));
             echo $result;
         }else {
-            echo 'El arcivo no tiene una extensión válida';
+            echo 'El archivo no tiene una extensión válida';
         }
     }
     

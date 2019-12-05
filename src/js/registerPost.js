@@ -1,5 +1,6 @@
 $(document).ready(function (e) {
     $("#regForm").on('submit', (function (e) {
+        $("#error").val('')
         e.preventDefault();
         $.ajax({
             type: "POST",

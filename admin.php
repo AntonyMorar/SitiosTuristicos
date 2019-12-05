@@ -11,7 +11,9 @@
 <body>
     <div id="root">
         <?php include("templates/header.php");?>
-        <h1>Admin</h1>
+        <h1>ADMIN</h1>
+
+        <div id="results"></div>
     </div>
 
     <!--===============================================================================================-->

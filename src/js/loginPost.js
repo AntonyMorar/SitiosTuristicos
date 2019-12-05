@@ -15,7 +15,7 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     if (data) {
-                        window.location.href = "index.php";
+                        window.location.href = "index";
                     } else {
                         $("#login").val('Iniciar Sesíon')
                         $("#error").html("Error: Nombre de usuario o contraseña no válida.");

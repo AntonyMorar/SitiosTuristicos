@@ -2,7 +2,7 @@
 session_start();
 if(!empty($_SESSION['login_user']))
 {
-   header('Location: index.php');
+   header('Location: index');
 }
 ?>
 
@@ -42,7 +42,7 @@ if(!empty($_SESSION['login_user']))
                <div class="inputPair short">
                   <label for="age">*Edad</label><input type="number" name="age" id="age"  min="0" max="120" />
                </div>
-               <div class="inputPair">
+               <div class="inputPair long">
                   <label>*Género</label>
                   <div class="inputGender">
                      <input type="radio" name="gender"id="M" value="M" /><label for="M">Hombre</label>
@@ -60,7 +60,7 @@ if(!empty($_SESSION['login_user']))
          </form>
          <div class="errorGlobal" id="error"></div>
          <div class="exitoGlobal" id="succes"></div>
-         <p>¿Ya tiene una cuenta? <a href="login.php">Inicia Sesión</a></p>
+         <p>¿Ya tiene una cuenta? <a href="login">Inicia Sesión</a></p>
       </div>
    </div>
 

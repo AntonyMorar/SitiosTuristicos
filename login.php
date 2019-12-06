@@ -19,14 +19,14 @@ if(!empty($_SESSION['login_user']))
          <img src="./src/images/sitiosLogo.png" alt="Sitios Turisticos" class="logo">
          <h1 class="title">Inicia sesión</h1>
 
-         <form method="post" id="loginForm">
+         <form id="loginForm">
             <div class="inputPair">
-               <label>Usuario</label><input type="text" name="username" class="box" id="username" />
+               <label>*Usuario</label><input type="text" name="username" id="username" required/>
             </div>
             <div class="inputPair">
-            <label>Contraseña</label><input type="password" name="password" class="box" id="password" />
+            <label>*Contraseña</label><input type="password" name="password" id="password" required/>
             </div>
-            <input type="submit" value="Iniciar Sesíon" id="login" class="buttonGen"/>
+            <button type="submit" form="loginForm" class="buttonGen" id="loginBtn">Iniciar Sesíon</button>
          </form>
          <div class="errorGlobal" id="error"></div>
          <p>¿Nuevo en Sitios Turísticos? <a href="register.php">Regístrate</a></p>

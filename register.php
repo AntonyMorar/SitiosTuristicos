@@ -19,28 +19,28 @@ if(!empty($_SESSION['login_user']))
          <img src="./src/images/sitiosLogo.png" alt="Sitios Turisticos" class="logo">
          <h1 class="title">Crea tu cuenta</h1>
 
-         <form method="post" id="regForm" enctype="multipart/form-data">
+         <form id="regForm">
             <div class="inputPairDouble">
                <div class="inputPair">
-                  <label for="username">*Username</label><input type="text" name="username" id="username" require/>
+                  <label for="username">*Username</label><input type="text" name="username" id="username" required/>
                </div>
                <div class="inputPair">
-                  <label for="email">*Correo</label><input type="email" name="email" id="email" require/>
+                  <label for="email">*Correo</label><input type="email" name="email" id="email" required/>
                </div>
             </div>
 
             <div class="inputPairDouble">
                <div class="inputPair">
-                  <label for="password">*Contraseña</label><input type="password" name="password" id="password" require/>
+                  <label for="password">*Contraseña</label><input type="password" name="password" id="password" required/>
                </div>
                <div class="inputPair">
-                  <label for="name">*Nombre Completo</label><input type="text" name="name" id="name" require/>
+                  <label for="name">*Nombre Completo</label><input type="text" name="name" id="name" required/>
                </div>
             </div>
 
             <div class="inputPairDouble">
                <div class="inputPair short">
-                  <label for="age">*Edad</label><input type="number" name="age" id="age"  min="0" max="120" require/>
+                  <label for="age">*Edad</label><input type="number" name="age" id="age"  min="0" max="120" required/>
                </div>
                <div class="inputPair long">
                   <label>*Género</label>

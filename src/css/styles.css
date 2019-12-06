@@ -115,6 +115,21 @@ img[alt] {
     margin-top: 0px;
 }
 
+.titleContainer.row {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titleContainer.row .title{
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
+.titleContainer input,
+.titleContainer select{
+    height: 100%;
+}
+
 .tooltipA {
     position: relative;
     display: inline-block;

@@ -78,6 +78,32 @@
             </div>
         </div>
 
+        <!-- Modal Agregar Imágen al sitio -->
+        <div class="modal fade" id="modalAgregarImg" tabindex="-1" aria-labelledby="imageLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="imageLabel">Agregar Imágen</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="siteImgForm">
+                            <div class="inputPair">
+                                <label for="ubication">*Foto del sitio</label><input type="file" accept="image/*" name="image"  id="uploadImage" required />
+                            </div>
+                            <div class="errorGlobal" id="error"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="buttonSec" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" form="siteImgForm" class="buttonGen" id="guardarImgBtn">Agregar Imágen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Alerta del sitio se agrego con exito -->
         <div class="alert alert-success alertPop" role="alert" id="agregarSitioSucces">El sitio se agrego con éxito</div>
 
         <!--===============================================================================================-->

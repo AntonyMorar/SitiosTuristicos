@@ -1,15 +1,35 @@
-<div>
-    <h1>{NOMBRE}</h1>
-    <p>{CATEG}</p>
-    <p>{UBI}</p>
-    <p>{DESC}</p>
-    <P>{RANKING}</P>
+<div class="site">
+    <div class="header">
+        <div class="headerImg">
+            <img src="" alt="{NOMBRE}">
+        </div>
+        <div class="headerData">
+            <h1 class="title">{NOMBRE}</h1>
+            <h3 class="place"><span class="glyphicon glyphicon-map-marker"></span>{UBI}</h3>
+        </div>
+    </div>
+
+    <div class="info">
+        <div>
+            <h4 class="subtitle">Categoria</h4>
+            <p>{CATEG}</p>
+        </div>
+        <div>
+            <h4 class="subtitle">Calificación</h4>
+            <p class="ranking"><span class="glyphicon glyphicon-star"></span>{RANKING}</p>
+        </div>
+    </div>
+
+    <div class="desc">
+        <h4 class="subtitle">Descripción</h4>
+        <p>{DESC}</p>
+    </div>
     <div id="map"></div>
 </div>
 
 <script>
     function initMap() {
-        var myLatLng = { lat: {LAT}, lng: {LONG} };
+        var myLatLng = { lat: { LAT }, lng: { LONG } };
         var map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
             zoom: 15

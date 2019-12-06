@@ -35,7 +35,7 @@ function obtenerOpiniones(){
 
 function obtenerSiteSuccess(result,status,xhr)
 {
-    $("#results").html(result);//Pega y muestra el código de html que se obtuvo de Ajax. Lo pega en el objeto con id="cuadro"
+    $("#resultsSite").html(result);//Pega y muestra el código de html que se obtuvo de Ajax. Lo pega en el objeto con id="cuadro"
     obtenerOpiniones();
 }
 

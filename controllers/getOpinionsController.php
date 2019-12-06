@@ -11,7 +11,8 @@
         //Armamos query
         $query = "SELECT op.idOpinion, op.opinion, op.calificacion, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
         INNER JOIN pf_usuarios AS us ON us.idUsuario = op.idUsuario
-        WHERE op.idSitio = $siteID";
+        WHERE op.idSitio = $siteID
+        ORDER BY op.fecha DESC";
         //Ejecutamos query
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
         //Deslpegamos query

@@ -1,20 +1,20 @@
-<h3>Opiniones de clientes</h3>
-
-<table>
+<div class="opinions">
+    <h3 class="title">Opiniones de clientes</h3>
     <!-- BEGIN FILA -->
-    <tr>
-        <td>
-            <img src="{FOTO_USUARIO}" alt="{FOTO_USUARIO}">
-        </td>
-        <td>
-            <a href="profile?id={IDUSUARIO}">{NOMBREUSUARIO} {USERNAME}</a>
-        </td>
-        <td>
-            <p>{OPINION}</p>
-        </td>
-        <td>
-            <p>{CALIF}</p>
-        </td>
-    </tr>
+    <div class="opinion">
+        <div class="profilePic">
+            <img src="{FOTO_USUARIO}" alt="{NOMBREUSUARIO}">
+        </div>
+        <div class="info">
+            <div class="infoTop">
+                <a href="profile?id={IDUSUARIO}"><b>{NOMBREUSUARIO}</b></a>
+                <p class="username">@{USERNAME}</p>
+                <p class="ranking"><span class="glyphicon glyphicon-star"></span>{CALIF}</p>
+            </div>
+            <div class="infoBody">
+                <p>{OPINION}</p>
+            </div>
+        </div>
+    </div>
     <!-- END FILA -->
-</table>
+</div>

@@ -1,7 +1,6 @@
-$(document).ready(function (e) {
-    $("#regForm").on('submit', (function (e) {
+$(document).ready(function () {
+    $("#regForm").on('submit', (function () {
         $("#error").val('')
-        e.preventDefault();
         $.ajax({
             type: "POST",
             url: "controllers/registerController.php",

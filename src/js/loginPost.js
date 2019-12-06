@@ -15,7 +15,7 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     if (data) {
-                        window.location.href = "index";
+                        window.location.href = "index.php";
                     } else {
                         $("#login").val('Iniciar Sesíon')
                         $("#error").html("Error: Nombre de usuario o contraseña no válida.");
@@ -23,7 +23,6 @@ $(document).ready(function () {
                 }
             });
         }
-        return false;
     });
 
 });

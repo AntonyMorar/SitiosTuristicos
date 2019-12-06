@@ -2,7 +2,7 @@
     //Cargamos archivos a ocupar
     include("../config/dbs.php");
     session_start();
-    $userID = $_SESSION['login_user'];
+    $userID = mysqli_real_escape_string($db,$_SESSION['login_user']);
     require_once "HTML/Template/IT.php";
     $template = new HTML_Template_IT('../templates');
     $template->loadTemplatefile("contactList.html", true, true);

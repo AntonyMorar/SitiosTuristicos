@@ -8,7 +8,7 @@
     $template->loadTemplatefile("contactListSearch.html", true, true);
     
     //Armamos query
-    $con=utf8_decode($_POST['contacto']);
+    $con=mysqli_real_escape_string($db, $_POST['contacto']);
     $query = "SELECT idUsuario, nombre, username, foto FROM pf_usuarios WHERE (idUsuario <> $userID) AND (nombre LIKE '%$con%' OR username LIKE '%$con%')";
     //Ejecutamos query
     $result = mysqli_query($db, $query) or die(mysqli_error($db));

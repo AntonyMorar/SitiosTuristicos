@@ -8,10 +8,10 @@
     // Si se envía el formulario
     if(isset($_POST['search'])){
         // Se cargan valores del post de ajax
-        $search=$_POST['search'];
-        $ubication=$_POST['ubication'];
-        $category=$_POST['category'];
-        $ranking=floatval($_POST['ranking']);
+        $search=mysqli_real_escape_string($db, $_POST['search']);
+        $ubication=mysqli_real_escape_string($db, $_POST['ubication']);
+        $category=mysqli_real_escape_string($db, $_POST['category']);
+        $ranking=mysqli_real_escape_string($db, floatval($_POST['ranking']));
         $ranking_top = $ranking + 1;
 
         if($ranking <= -1){

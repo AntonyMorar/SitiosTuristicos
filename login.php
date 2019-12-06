@@ -29,7 +29,7 @@ if(!empty($_SESSION['login_user']))
             <input type="submit" value="Iniciar Sesíon" id="login" class="buttonGen"/>
          </form>
          <div class="errorGlobal" id="error"></div>
-         <p>¿Nuevo en Sitios Turísticos? <a href="register">Regístrate</a></p>
+         <p>¿Nuevo en Sitios Turísticos? <a href="register.php">Regístrate</a></p>
       </div>
    </div>
 

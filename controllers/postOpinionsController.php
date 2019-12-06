@@ -7,9 +7,9 @@
     // Si se envía el formulario
     if(isset($_POST['ranking']) && isset($_POST['opinion'])){
         // Se cargan valores del post de ajax
-        $ranking=$_POST['ranking'];
-        $opinion=$_POST['opinion'];
-        $idSitio=$_POST['idSitio'];
+        $ranking=mysqli_real_escape_string($db, $_POST['ranking']);
+        $opinion=mysqli_real_escape_string($db, $_POST['opinion']);
+        $idSitio=mysqli_real_escape_string($db, $_POST['idSitio']);
 
         $query = "INSERT INTO pf_opiniones (idSitio, idUsuario, opinion, calificacion) VALUES ($idSitio, $userID, '$opinion', $ranking)";
         echo $query;

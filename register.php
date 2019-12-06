@@ -45,10 +45,10 @@ if(!empty($_SESSION['login_user']))
                <div class="inputPair long">
                   <label>*Género</label>
                   <div class="inputGender">
-                     <input type="radio" name="gender"id="M" value="M" /><label for="M">Hombre</label>
-                     <input type="radio" name="gender"  value="F" id="F"><label for="F">Mujer</label>
-                     <input type="radio" name="gender"  value="B" id="B"><label for="B">No binario</label>
-                     <input type="radio" name="gender"  value="O" id="O"><label for="O">No Revelar</label>
+                     <input type="radio" name="gender" value="M" /><label for="M">Hombre</label>
+                     <input type="radio" name="gender"  value="F"><label for="F">Mujer</label>
+                     <input type="radio" name="gender"  value="B"><label for="B">No binario</label>
+                     <input type="radio" name="gender"  value="O"><label for="O">No Revelar</label>
                   </div>
                </div>
             </div>
@@ -60,7 +60,7 @@ if(!empty($_SESSION['login_user']))
          </form>
          <div class="errorGlobal" id="error"></div>
          <div class="exitoGlobal" id="succes"></div>
-         <p>¿Ya tiene una cuenta? <a href="login">Inicia Sesión</a></p>
+         <p>¿Ya tiene una cuenta? <a href="login.php">Inicia Sesión</a></p>
       </div>
    </div>
 

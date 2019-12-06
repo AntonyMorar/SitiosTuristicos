@@ -3,7 +3,7 @@
    session_start();
    // Revisa si el usuario esta logeado, si no esta lo manda a login.php
    if(!isset($_SESSION['login_user'])){
-      header("Location:login");
+      header("Location:login.php");
       die();  
    }
 
@@ -17,6 +17,6 @@
 
    //Revisa si el usuario tiene privilegios de administrador, si no tiene lo manda a index.php 
    if($privilege != 'administrador' && ($actual_path == '/admin' || $actual_path == '/admin.php' || $actual_path == '/sitesAdmin'  || $actual_path == '/sitesAdmin.php')){
-      header("Location:index");
+      header("Location:index.php");
    }
 ?>

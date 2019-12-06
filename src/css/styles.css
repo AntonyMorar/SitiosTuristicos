@@ -65,6 +65,19 @@ select {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10), 0 2px 5px rgba(0, 0, 0, 0.14);
 }
 
+.buttonSec{
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    color: #333;
+    height: 100%;
+}
+
+.buttonSec:hover{
+    background-color: #e6e6e6;
+}
+
 #results {
     padding: 40px 60px;
 }
@@ -317,6 +330,14 @@ a.effect-underline:hover:after {
     text-decoration: none;
 }
 
+/* Site
+---------------------------------------------------------------*/
+#map{
+    background-color: #ccc;
+    width: 100%;
+    height: 350px;
+}
+
 /* Login & Registro
 ---------------------------------------------------------------*/
 .login {
@@ -452,6 +473,7 @@ a.effect-underline:hover:after {
     margin-right: 15px;
 }
 
+
 /* Contact List & Seach contact
 ---------------------------------------------------------------*/
 .contactList {}
@@ -568,3 +590,6 @@ a.effect-underline:hover:after {
 .adminTable tr td:last-child {
     border-left: 1px solid #ccc;
 }
+
+/* Sites Admin
+---------------------------------------------------------------*/

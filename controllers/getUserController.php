@@ -7,7 +7,7 @@
 
       if (isset($_GET['id'])) {
         // Cargamos el parametro id y lo guardamos en una variable
-        $profileID = $_GET['id'];
+        $profileID = mysqli_real_escape_string($db, $_GET['id']);
         // Armamos query
         $sql = "SELECT idUsuario, tipo_usuario, nombre, username, edad, genero, foto, correo, fecha_registro FROM pf_usuarios WHERE idUsuario=$profileID";
         // Ejecutamos query

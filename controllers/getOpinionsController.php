@@ -7,7 +7,7 @@
     
     if(isset($_GET['id'])){
         // Cargamos el parametro id y lo guardamos en una variable
-        $siteID = $_GET["id"];
+        $siteID = mysqli_real_escape_string($db, $_GET["id"]);
         //Armamos query
         $query = "SELECT op.idOpinion, op.opinion, op.calificacion, op.fecha, us.idUsuario, us.nombre as nombre_usuario, us.username, us.foto as foto_usuario FROM pf_opiniones AS op 
         INNER JOIN pf_usuarios AS us ON us.idUsuario = op.idUsuario

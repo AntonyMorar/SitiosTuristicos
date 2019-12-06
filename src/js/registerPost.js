@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $("#regForm").on('submit', (function () {
+    $("#regForm").on('submit', (function (e) {
+        e.preventDefault();
         $("#error").val('')
         $.ajax({
             type: "POST",
@@ -9,7 +10,7 @@ $(document).ready(function () {
             cache: false,
             processData: false,
             beforeSend: function () {
-                $("#register").val('Cargando...');
+                $("#register").text('Cargando...');
             },
             success: function (data) {
                 if (data) {
@@ -21,7 +22,7 @@ $(document).ready(function () {
                     }
                     $("#regForm")[0].reset(); // Pone en blanco todos los campos del formulario
                 } else {
-                    $("#register").val('Registrarse')
+                    $("#register").text('Registrarse')
                     $("#error").html("Error al crear un nuevo usuario, intenta de nuevo más tarde.");
                     $("#regForm")[0].reset(); // Pone en blanco todos los campos del formulario
                 }

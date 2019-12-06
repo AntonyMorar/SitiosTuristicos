@@ -12,7 +12,6 @@
         $idSitio=mysqli_real_escape_string($db, $_POST['idSitio']);
 
         $query = "INSERT INTO pf_opiniones (idSitio, idUsuario, opinion, calificacion) VALUES ($idSitio, $userID, '$opinion', $ranking)";
-        echo $query;
         //Ejecutamos query
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
         //Deslpegamos query

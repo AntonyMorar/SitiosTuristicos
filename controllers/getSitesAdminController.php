@@ -8,7 +8,7 @@
     $template->loadTemplatefile("sitesListAdmin.html", true, true);
     
     //Armamos query
-    $query = "SELECT * FROM pf_sitios";
+    $query = "SELECT * FROM pf_sitios ORDER BY fecha DESC";
     //Ejecutamos query
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     //Deslpegamos query

@@ -6,7 +6,11 @@
     $template->loadTemplatefile("sitesListAdmin.html", true, true);
     
     //Armamos query
-    $query = "SELECT * FROM pf_sitios ORDER BY fecha DESC";
+    $query = "SELECT s.*, COUNT(fs.idFoto) AS no_fotos FROM pf_sitios AS s
+    LEFT JOIN pf_fotositios AS fs ON fs.idSitio = s.idSitio
+    WHERE (s.categoria LIKE '%%')
+    GROUP BY s.idSitio
+    ORDER BY fecha DESC";
     //Ejecutamos query
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     //Deslpegamos query
@@ -23,6 +27,7 @@
         $template->setVariable("DESC", $line['descripcion']);
         $template->setVariable("LONG", $line['longitud']);
         $template->setVariable("LAT", $line['lat']);
+        $template->setVariable("NO_FOTOS", $line['no_fotos']);
         
         $template->parseCurrentBlock("FILA");
     }

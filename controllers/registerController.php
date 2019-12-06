@@ -12,7 +12,7 @@
         $email = mysqli_real_escape_string($db, strtolower($_POST['email']));
         $password = mysqli_real_escape_string($db, $_POST['password']);
 
-        $img = $_FILES["image"]["name"]; //Guarda la imágen original del cliente
+        $img = $_FILES["image"]["name"]; //Guarda el nombre de la imágen original del cliente
         $tmp = $_FILES["image"]["tmp_name"]; //Guarda el nombre del archivo temporal
 
         $ext = strtolower(pathinfo($img, PATHINFO_EXTENSION)); // Obtener la extensión del archivo cargado

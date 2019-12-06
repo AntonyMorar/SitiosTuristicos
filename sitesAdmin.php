@@ -92,8 +92,9 @@
                             <div class="inputPair">
                                 <label for="ubication">*Foto del sitio</label><input type="file" accept="image/*" name="image"  id="uploadImage" required />
                             </div>
-                            <div class="errorGlobal" id="error"></div>
+                            <div class="errorGlobal" id="errorImg"></div>
                         </form>
+                        <span id="id_helper"></span>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="buttonSec" data-dismiss="modal">Cerrar</button>
@@ -105,6 +106,7 @@
 
          <!-- Alerta del sitio se agrego con exito -->
         <div class="alert alert-success alertPop" role="alert" id="agregarSitioSucces">El sitio se agrego con éxito</div>
+        <div class="alert alert-success alertPop" role="alert" id="agregarSitioImagenSucces">La imégen se agrego con éxito</div>
 
         <!--===============================================================================================-->
         <script src="src/js/sitesAdminGet.js"></script>

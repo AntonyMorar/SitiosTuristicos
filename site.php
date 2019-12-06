@@ -20,7 +20,7 @@
                 <div class="opinionFormInner">
                     <label for="ranking">Calificación general</label>
                     <select name="ranking" id="ranking" required>
-                        <option value="" selected disabled>Todas</option>
+                        <option value="" selected disabled>Elige una calificación</option>
                         <option value="0">&#9734;</option>
                         <option value="1">&#9733;</option>
                         <option value="2">&#9733;&#9733;</option>

@@ -55,7 +55,7 @@ Tiene conexión con los siguientes archivos:
 - *Otros archivos template*
 
 ### login.php :star:
-*Esta ruta requiere **no estar autenticado** para acceder*
+*Esta ruta **no requiere autenticación** para acceder*
 
 Login permite generar una sesión en el sitio.
 
@@ -66,7 +66,7 @@ Tiene conexión con los siguientes archivos:
 - *Otros archivos template*
 
 ### register.php :star:
-*Esta ruta requiere **no estar autenticado** para acceder*
+*Esta ruta **no requiere autenticación** para acceder*
 
 Login permite hacer un post a la base de datos y generar usuarios.
 
